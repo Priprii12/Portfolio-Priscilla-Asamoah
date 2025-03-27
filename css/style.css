@@ -1,0 +1,452 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+/* Default styles for all devices */
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 10px;
+  }
+  .container h1 {
+    font-size: 24px;
+  }
+  .container h2 {
+    font-size: 18px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .container {
+    padding-left: 50px;
+  }
+  .container h1 {
+    font-size: 36px;
+  }
+  .container h2 {
+    font-size: 24px;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 769px) {
+  .container {
+    padding-left: 100px;
+  }
+  .container h1 {
+    font-size: 48px;
+  }
+  .container h2 {
+    font-size: 36px;
+  }
+}
+
+/* Extra large devices (large desktops or TVs) */
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 150px;
+  }
+  .container h1 {
+    font-size: 60px;
+  }
+  .container h2 {
+    font-size: 48px;
+  }
+}
+.contact-me{
+background-color:white
+}
+#contact-form {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding: 20px;
+  background: rgb(22, 22, 22);
+  color: white;
+  border-radius: 5px;
+}
+
+#contact-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #262424;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;;
+}
+.contact-title{
+  margin-top:80px;
+  text-align: center;
+  color: #363636;
+  font-family: 'Playfair Display', serif;
+font-weight: bolder;
+}
+#git {
+  margin-top: 0px; /* Adjust the margin-top value as needed to bring the "Git" text closer to the title */
+  color: rgba(54, 54, 54, 0.79);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  font-style: italic;
+}
+#contact-form input[type="submit"] {
+  background: rgb(219, 175, 183);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#contact-form input[type="submit"]:hover {
+  background:  rgb(239, 207, 212);
+}
+
+#projects  {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: black; /* Update background color if needed */
+  color: white; /* Set text color to white */
+margin-left:200px;
+margin-top: 1090px;
+}
+
+
+.project-title,
+.project-title2,
+.project-title3
+ {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+.project1-description,
+.project2-description,
+.project3-description{
+  font-family:"Raleway", sans-serif;
+  color: white; /* Set text color to white */
+  text-align: left; /* Center the text */
+font-size: 19px;
+}
+.project-img, 
+.project-img2, 
+.project-img3 {
+  width: 668px; /* Set a specific width for the project images */
+  height: 580px; /* Set a specific height for the project images */
+  margin-left: 180px; /* Adjust the margin as needed */
+  border: 5px solid grey; /* Set the border color to pink */
+}
+
+
+.section_text_p1 {
+  font-size: 24px;
+  margin-top: 30px;
+  color: #eee;
+}
+
+.title {
+  font-size: 48px;
+}
+.project1-description{
+  color: #eee;
+  
+}
+.portbody{
+  
+  height: 100vh;
+  overflow-x:  hidden;
+  background: black;
+
+}
+
+
+
+.indexbody{
+  
+height: 100vh;
+overflow-x:  hidden;
+
+
+
+background: repeating-linear-gradient(
+  to right,
+  white 0%,
+  white 50%,
+  black 50%,
+  black 100%
+);
+
+display: flex;
+justify-content: flex-start;
+align-items: center;
+
+}
+.coolheader{
+  width: 100%;
+  height: 25px;
+  background-color: black;
+position: fixed;
+  top: 0; 
+  right: 0;
+  z-index: 999;  
+display: flex;
+justify-content: space-between;
+}
+.coolheader img{
+  margin-left: 10px;
+width: 4.5%;
+margin-bottom: 5px;
+}
+.header-main{
+width: 100%;
+height: 70px;
+background-color: black;
+position: fixed; /* Fix the header position */
+  top: 0; /* Position the header at the top of the page */
+  
+  right: 0;
+  z-index: 999; /* Ensure the header is above other content */
+display: flex;
+justify-content: space-between;
+}
+
+
+
+.header-main-nav{
+  width: fit-content;
+height: 100%;
+}
+.header-main-nav ul{
+list-style: none;
+margin-right: 30px; 
+
+}
+.header-main-nav li{
+  display: inline;
+  float: left;
+  margin-right: 10px;
+ 
+}
+.header-main-nav li a{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-decoration: none;
+line-height: 80px;
+color: white;
+
+}
+.header-main-nav li a:hover{
+color: #FDBEC9;
+}
+.header-main-sm{
+  width: 120px;
+height: 100%;
+padding-right: 60px;
+}
+
+.container {
+  height: 500px;
+margin-top: 80px;
+padding-left:100px;
+
+
+}
+#introduction{
+  font-family: 'Playfair Display', serif;
+    color: rgb(8, 17, 35);
+    font-size: 19px;
+    font-weight:normal;
+    text-align: left;
+    letter-spacing: 2px;
+    width: 100%;
+    transform: translateY(800px) translateX(-30px);
+position: static;
+  }
+  #signlogo img{
+    padding-bottom:90px;
+    transform: translateY(900px) translateX(-120px);
+    position: static;
+    box-sizing: border-box;
+    }
+.container h1{
+  width: 50%;
+  font-family: 'Playfair Display', serif;
+    color: rgb(8, 17, 35);
+    font-size: 80px;
+    text-align: left;
+    transform: translateY(790px) translateX(30px);
+
+
+}
+.container h2{
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 60px;
+  color: rgb(8, 17, 35);
+  text-align: center;
+  width: 100%;
+  font-style:italic;
+rotate:340deg;
+transform: translateY(600px)translateX(-620px);
+
+}
+.container-info {
+margin-top: 390px;
+margin-left: 700px;
+padding-bottom: 500px;
+ width: 60%;
+   }
+   .container-info h1{
+     font-family: "Raleway", sans-serif;
+     color: white;
+     font-size: 36px;
+     font-weight:normal;
+     text-align: left;
+     letter-spacing: 2px;
+     width: 70%;
+     height: 170px;
+     padding-left: 145px;
+     
+     position: static;
+    
+   }
+ .container-info h2{
+   font-family:"Raleway", sans-serif;
+     color: white;
+     font-size: 15px;
+     font-weight:normal;
+     text-align:left;
+     letter-spacing: 1px;
+     width: 65%;
+     margin-top: -90px; /* Adjust this value to move h2 up or down */
+padding-left: 140px;
+position: static;
+    }
+    .header-main-sm-in{
+      width: 20px;
+      height: 20px;
+    background-image: url(../images/linkedin2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;  
+  margin-top: 5px;
+  margin-left:140px ;
+
+  }
+  .header-main-sm-ghb{
+    width: 20px;
+    height: 20px;
+  background-image: url(../images/github2.png);
+background-repeat: no-repeat;
+background-size: cover;  
+float: left;
+transform: translateX(10px);
+margin-top: 5px;
+}
+#sign-up{
+  height: 600px;
+  background-color: #eee;
+  text-align: left;
+  padding: 10px;
+
+}
+#education {
+
+  padding: 0px;
+  margin-top: 5px;
+  margin-left: 20px; 
+  background-color: white; /* Change the background color to pink */
+  height: 110vh; /* Set the height to cover the full viewport height */
+  border: 18px solid white; /* Add a black border with 2px thickness */
+
+}
+
+
+#education h1 {
+  font-weight: bold;
+  font-family:'Playfair Display', serif; 
+  font-size: 36px;
+  color: black;
+  text-align: center;
+}
+
+#education p {
+  
+  font-size: 16px;
+  color: black;
+  text-align: left;
+  line-height: 1.6;
+}
+#ratings-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 600px; /* Set a specific height for the container */
+}
+#htmlrating{
+  margin-bottom: 360px;
+ margin-left:10px;
+}
+
+
+#jsrating {
+margin-bottom: 400px;
+margin-left:80px;
+}
+
+#cssrating {
+
+  margin-bottom: 460px;
+  margin-right: 2px;
+}
+#experience-container {
+  bottom:31%;
+  position: relative; 
+  background-color: white;
+  height: 100vh;
+  transform: translateX(-37px) translateY(-200px);
+width: 50%;
+
+}
+#work-experience h2,
+#interests h2,
+#skills h2{
+  font-family:'Playfair Display', serif; 
+margin-top: 38px;
+}
+#htmlimg img {
+
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  margin-left: 0px; /* Adjust the value to move the image to the right */
+margin-top: 10px;
+
+}
+#contact-info img{
+  width:220px;
+  margin-right: 20px;
+  border: 6px solid pink ;
+}
+#contact-info {
+
+  margin-left: 900px;
+transform: translateY(-700px) translateX(10px);
+
+
+}
+#contact-info p{
+  color: #eee;
+  font-family:'Playfair Display', serif;
+}
+
