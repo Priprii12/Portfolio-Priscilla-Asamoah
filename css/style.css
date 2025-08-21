@@ -177,7 +177,7 @@ font-size: 19px;
 
 .indexbody{
   
-height: 100vh;
+height: 30vh;
 overflow-x:  hidden;
 
 
@@ -213,7 +213,7 @@ margin-bottom: 5px;
 }
 .header-main{
 width: 100%;
-height: 70px;
+height: 79px;
 background-color: black;
 position: fixed; /* Fix the header position */
   top: 0; /* Position the header at the top of the page */
@@ -303,8 +303,8 @@ transform: translateY(600px)translateX(-620px);
 
 }
 .container-info {
-margin-top: 390px;
-margin-left: 700px;
+margin-top: 490px;
+margin-left: 900px;
 padding-bottom: 500px;
  width: 60%;
    }
@@ -367,7 +367,7 @@ margin-top: 5px;
   padding: 0px;
   margin-top: 5px;
   margin-left: 20px; 
-  background-color: white; /* Change the background color to pink */
+  background-color:black; /* Change the background color to pink */
   height: 110vh; /* Set the height to cover the full viewport height */
   border: 18px solid white; /* Add a black border with 2px thickness */
 
@@ -389,12 +389,14 @@ margin-top: 5px;
   text-align: left;
   line-height: 1.6;
 }
+
 #ratings-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 600px; /* Set a specific height for the container */
 }
+
 #htmlrating{
   margin-bottom: 360px;
  margin-left:10px;
@@ -443,8 +445,9 @@ margin-top: 10px;
   margin-left: 900px;
 transform: translateY(-700px) translateX(10px);
 
-
 }
+.
+
 #contact-info p{
   color: #eee;
   font-family:'Playfair Display', serif;
