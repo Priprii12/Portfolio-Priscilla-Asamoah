@@ -1,0 +1,405 @@
+/* =========================================
+   INDEX PAGE STYLES 
+   ================================********* */
+    /* --- RESET & BASICS --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* --- NAVIGATION --- */
+    .main-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a:hover {
+      color: #FDBEC9;
+    }
+
+    .nav-name {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* --- HERO SECTION (SPLIT SCREEN) --- */
+    .hero-split {
+      display: flex;
+      min-height: 100vh;
+      margin-top: 60px;
+    }
+
+    .hero-left {
+      flex: 1;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+    }
+
+    .hero-right {
+      flex: 1;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .content-wrapper {
+      max-width: 500px;
+      width: 100%;
+    }
+    .signaturelogo{
+      margin-right: 20%;
+    }
+
+    .intro-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #081123;
+      margin-bottom: 0;
+      margin-right: 80px;
+    }
+
+    .main-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      line-height: 0.9;
+      color: #081123;
+      margin-bottom: 10px;
+    }
+
+    .script-name {
+      font-family: 'Mrs Saint Delafield', cursive;
+      font-size: 70px;
+      color: #081123;
+      transform: rotate(-18deg) translateX(105px) translateY(-27px);
+      display: block;
+    }
+  
+
+    .hero-right h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .hero-right .sub-text {
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .profile-pic {
+      border: 5px solid pink;
+      width: 250px;
+      display: block;
+      margin-top: 30px;
+    }
+
+    /* --- PINK SQUARE ICONS (FIXED) --- */
+    .social-icons {
+      display: flex;
+      gap: 20px; /* Space between icons */
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .pink-square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;  
+        height: 40px; 
+        background-color: rgb(219, 175, 183); /* Pink */
+        border: 2px solid white; 
+        transition: transform 0.2s; 
+        text-decoration: none; /* Remove underline */
+    }
+
+    .pink-square img {
+        width: 20px; 
+        height: 20px;
+        display: block;
+        object-fit: contain; /* Ensures image fits nicely */
+    }
+
+    .pink-square:hover {
+        background-color: rgb(239, 207, 212);
+        transform: scale(1.1);
+    }
+
+    /* --- SECTIONS --- */
+    .dark-section {
+      background-color: black;
+      color: white;
+      padding: 80px 10%;
+      border: 18px solid white;
+    }
+
+    .light-section {
+      background-color: #eee;
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .white-section {
+      background-color: white;
+      color: #333;
+      padding: 80px 10%;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .edu-item, .job-item {
+      margin-bottom: 30px;
+    }
+
+    .edu-item h3, .job-item h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .meta {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: gray;
+    }
+
+    .dark-section .meta {
+      color: #bbb;
+    }
+
+    .quote {
+      border-left: 4px solid pink;
+      padding-left: 20px;
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    .skills-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      border-bottom: 4px solid black;
+    }
+
+    .contact-footer {
+      text-align: center;
+      border: none;
+    }
+
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 768px) {
+      .hero-split {
+        flex-direction: column;
+      }
+      .hero-left, .hero-right {
+        padding: 60px 20px;
+      }
+      .main-name {
+        font-size: 50px;
+      }
+      .script-name {
+        font-size: 50px;
+        transform: rotate(-10deg) translateX(20px);
+      }
+      .dark-section, .white-section, .light-section {
+        padding: 40px 20px;
+        border-width: 0;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+
+/* =========================================
+   PORTFOLIO PAGE STYLES (Black Background)
+   ================================********* */
+
+/* 1. Page Background & Reset */
+.portbody {
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden; /* Prevents side scrolling */
+}
+
+/* 2. Navigation (Matches your Index page) */
+.header-main {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  border-bottom: 1px solid #333; /* Subtle divider */
+}
+
+.header-main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-main-nav li {
+  margin-right: 30px;
+}
+
+.header-main-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-main-nav a:hover {
+  color: #FDBEC9; /* Your Pink Hover Color */
+}
+
+/* 3. Main Project Section Layout */
+#projects {
+  padding-top: 120px; /* Space for the fixed header */
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Titles */
+.section_text_p1 {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+}
+
+/* 4. Individual Project Container */
+.detailes-container {
+  margin-bottom: 80px; /* Space between projects */
+  width: 80%; /* Takes up 80% of screen */
+  max-width: 900px; /* Stops it getting too wide on huge screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers image and text */
+}
+
+/* 5. Project Images (The Grey Border Style you like) */
+.project-img, 
+.project-img2, 
+.project-img3 {
+  width: 100%; /* Responsive width */
+  max-width: 668px; /* Your original preferred width */
+  height: auto; /* Maintains aspect ratio */
+  border: 5px solid grey; /* Your requested style */
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* 6. Project Text Styling */
+.project-title,
+.project-title2,
+.project-title3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project1-description,
+.project2-description,
+.project3-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #eee;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 700px; /* Makes text easier to read */
+  font-weight: 300;
+}
+
+/* Hide the decorative dot if it interferes, or style it */
+.coolheader {
+  display: none; /* Hides the blackdot image unless you really need it */
+}
+
+/* 7. Mobile Adjustments */
+@media (max-width: 768px) {
+  .header-main {
+    padding: 0 20px;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .project-title, .project-title2, .project-title3 {
+    font-size: 24px;
+  }
+  
+  .project1-description, .project2-description, .project3-description {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+}
