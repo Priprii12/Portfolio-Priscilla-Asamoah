@@ -187,7 +187,7 @@ section {
         align-items: center;
         width: 30px;  
         height: 30px; 
-        margin-top: -25px;
+        margin-top: 25px;
         margin-left: 5px;
         background-color: rgb(219, 175, 183); /* Pink */
         transition: transform 0.2s; 
@@ -441,8 +441,14 @@ section {
 }
 
 /* 3. Main Project Section Layout */
+/* 3. Main Project Section Layout */
+/* =========================================
+   PROJECT SECTION (CLEAN & CENTERED)
+   ================================********* */
+
+/* 1. Main Section Wrapper */
 #projects {
-  padding-top: 120px; /* Space for the fixed header */
+  padding-top: 120px;
   padding-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -450,7 +456,7 @@ section {
   width: 100%;
 }
 
-/* Titles */
+/* 2. Main Titles (e.g., "Browse My Recent") */
 .section_text_p1 {
   font-size: 18px;
   color: #ccc;
@@ -466,50 +472,78 @@ section {
   color: white;
 }
 
-/* 4. Individual Project Container */
+/* 3. Individual Project Container (Holds Image + Text) */
 .detailes-container {
-  margin-bottom: 80px; /* Space between projects */
-  width: 80%; /* Takes up 80% of screen */
-  max-width: 900px; /* Stops it getting too wide on huge screens */
+  margin-bottom: 80px;
+  width: 90%;          /* Uses percentage so it fits mobile */
+  max-width: 900px;    /* Stops it from getting too wide */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers image and text */
+  align-items: center; /* Forces everything to the center line */
 }
 
-/* 5. Project Images (The Grey Border Style you like) */
+/* 4. Project Images */
+/* NOTE: We list all classes to make sure they all behave the same */
 .project-img, 
 .project-img2, 
-.project-img3 {
-  width: 100%; /* Responsive width */
-  max-width: 668px; /* Your original preferred width */
-  height: auto; /* Maintains aspect ratio */
-  border: 5px solid grey; /* Your requested style */
-  display: block;
-  margin-bottom: 30px;
+.project-img3,
+.project-img4, 
+.project-img5, 
+.project-img6 {
+  width: 100%;
+  max-width: 700px;
+  
+  /* THE FIX: 450px is the happy medium between "too small" and "too tall" */
+  height: 450px; 
+  
+  border: 5px solid grey;
+  
+  /* IMPORTANT FIX: Images should be 'block', not 'flex' */
+  display: block; 
+  
+  margin-bottom: 30px; /* Space between Image and Title */
+ 
 }
 
-/* 6. Project Text Styling */
+/* 5. Project Titles */
 .project-title,
 .project-title2,
-.project-title3 {
+.project-title3,
+.project-title4,
+.project-title5,
+.project-title6 {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   text-align: center;
+  width: 100%;
+  color: white;
 }
 
+/* 6. Project Descriptions */
 .project1-description,
 .project2-description,
-.project3-description {
+.project3-description,
+.project4-description,
+.project5-description,
+.project6-description {
   font-family: 'Raleway', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #eee;
-  text-align: center;
+  
+  /* ALIGNMENT FIX */
+  text-align: center; /* Centers the words */
+  margin: 0 auto;     /* Centers the invisible text box */
+  
   line-height: 1.6;
-  max-width: 700px; /* Makes text easier to read */
+  
+  /* TRICK: Making text slightly narrower than the image looks cleaner */
+  max-width: 650px; 
+  width: 100%;
+  
   font-weight: 300;
+  font-style: normal; /* Ensures no italics */
 }
-
 /* Hide the decorative dot if it interferes, or style it */
 .coolheader {
   display: none; /* Hides the blackdot image unless you really need it */
