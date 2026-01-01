@@ -1,89 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal CV</title>
+  <!-- Favicon -->
+  <title>Priscilla Asamoah | Portfolio</title>
   <link rel="icon" href="images\favicon2.png" type="image/x-icon" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Put this in your HTML <head> if it is missing -->
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+  <!-- File links -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script defer src="js/basic.js"></script>
 
-
-
-<link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script defer src="js/basic.js"></script>
-
-
-
-
-<style>
-  h6 {
-    margin-left: 1499px;
-    margin-bottom: 800px;
-    color: aliceblue;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-  }
-</style>
 </head>
-<body class="indexbody">
- <header class="header-main">
-    <!-- Item 1: The Navigation (Goes to the Left) -->
-    <nav class="header-main-nav"> 
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="?">ABOUT ME </a></li>
-         <li><a href="Portfolio.html"> PORTFOLIO </a></li>
-        <li><a href="Contactme.html">CONTACT ME</a></li>
-      </ul>
-    </nav>
 
-    <!-- Item 2: The Name (Goes to the Right) -->
-    <h6 class="name-text">PRISCILLA ASAMOAH</h6>
-  </header>
+<body>
+  
+  <nav class="main-nav">
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#skills">SKILLS</a> 
+      <a href="#work-experience">EXPERIENCE</a>
+       <a href="Portfolio.html">PORTFOLIO</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+    <div class="nav-name">PRISCILLA ASAMOAH</div>
+  </nav>
 
-    <div class="header-main-sm">
+  <main>
+    <section class="hero-split">
+      <div class="hero-left">
+        <div class="content-wrapper">
+          <div class="sign-logo">
+            <img src="images/signlogo.png" alt="Signature Logo" class="signaturelogo"> 
+          </div>
+          <p class="intro-text">Hi, I'm</p>
+          <h1 class="main-name">PRISCILLA</h1>
+          <h2 class="script-name">Asamoah</h2>
+        </div>
 
+          <div class="hero-image-container">
+       <img src="images/me.jpg" alt="Priscilla" class="profile-pic">
+    </div>
 
+      </div>
+
+      <div class="hero-right">
+        <div class="content-wrapper">
+          <h1>DATA DRIVEN DEVELOPER</h1>
+          <p class="sub-text">This is my official portfolio website. I am passionate and enjoy everything data science. I showcase my experience, projects and skills.</p>
+          
+          <!-- NEW DOWNLOAD BUTTON -->
+          <a href="images/PriscillaCSCV.pdf" download class="btn-download">
+              Download CV
+          </a>
+
+          <!-- SOCIAL ICONS: PINK SQUARES WITH IMAGES -->
+          <div class="social-icons">
+             <a href="https://www.linkedin.com/in/priscilla-a-752004272/" target="_blank" class="pink-square">
+                 <img src="images/linkedin2.png" alt="LinkedIn">
+             </a>
+             <a href="https://github.com/xx994" target="_blank" class="pink-square">
+                 <img src="images/github2.png" alt="GitHub">
+             </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="dark-section">
+      <div class="container-fluid">
+        <h2 class="section-title">EDUCATION</h2>
+        
+        <div class="edu-item">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p class="meta">Aston University (2023-2026)</p>
+          <ul>
+            <li>Core Modules: Artificial Intelligence, Software Engineering, Data Structures & Algorithms (DSA), and Agile Development.</li>
+            <li>Key Project: Developing a Stroke Prediction System using Ensemble Machine Learning to improve diagnostic accuracy (Current Term).</li>
+          </ul>
+        </div>
+
+        <div class="edu-item">
+          <h3>Level 3 BTEX Extended Certificate </h3>
+          <p class="meta">Luton Sixth Form (2021-2023)</p>
+          <ul>
+            <li>Subjects: Information & Creative Technology (ICT), Business, and Travel & Tourism.</li>
+            <li>Achieved distinctions in ICT and Business analysis modules.</li>
+          </ul>
+        </div>
+
+        <div class="edu-item">
+          <h3>9 GCSE’s including Mathematics, English and Science </h3>
+          <p class="meta">All Saints Academy Dunstable (2017-2021)</p>
+          <ul>
+            <li>Achieved 9 GCSEs (Grades 9-4) including Mathematics, English, and Science.</li>
+
+          </ul>
+        </div>
+
+        <blockquote class="quote">
+          "Education is not the learning of facts, but the training of the mind to think." - Albert Einstein
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="skills" class="light-section">
+      <h2 class="section-title">TECHNICAL SKILLS</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>MACHINE LEARNING</h3>
+          <p>Expertise rating: ★★★☆☆</p> Proficient
+        </div>
+        <div class="skill-card">
+          <h3>PYTHON</h3>
+          <p>Expertise rating: ★★★☆☆</p> Intermediate
+        </div>
+        <div class="skill-card">
+          <h3>SQL</h3>
+          <p>Expertise rating: ★★★☆☆</p> Familiar
+        </div>
+      </div>
+    </section>
+
+    <section id="work-experience" class="white-section">
+      <div class="container-fluid">
+        <h2 class="section-title">WORK EXPERIENCE</h2>
+        
+        <div class="job-item">
+          <h3>E-Commerce Business Owner</h3>
+          <p class="meta">Self-Employed (Sep 2020 – April 2023)</p>
+          <p>Founded and managed an online retail business selling vintage goods and
+managed digital marketing, product photography, and competitive pricing strategies.
+Maintained a 100% positive customer feedback rating through excellent service and logistics management.</p>
+        </div>
+
+        <div class="job-item">
+          <h3>Stroke Prediction Model (Academic Project)</h3>
+          <p class="meta">Aston University (Current)</p>
+          <p>Designing a machine learning model to predict stroke likelihood based on patient health data and utilizing Python (Pandas, Scikit-learn) to clean data and train Ensemble models. Focusing on solving data imbalance issues to achieve high prediction accuracy.</p>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 50px;">INTERESTS</h2>
+        <p>Web Design: Passionate about creating accessible and responsive user interfaces.</p>
+      </div>
+    </section>
+
+   <!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="container-fluid">
+    <h2 class="section-title">CONTACT ME</h2>
+    
+    <div class="contact-container">
+      
+      <!-- LEFT SIDE: The Form -->
+      <div class="contact-left">
+        <form action="#" method="POST" class="simple-form">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" rows="5" required></textarea>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
+
+      <!-- RIGHT SIDE: Info & Socials -->
+      <div class="contact-right">
+        <h3>Let's Connect</h3>
+        <p class="contact-desc">
+          I am currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        </p>
+        
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Birmingham, UK</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span>230168011@aston.ac.uk</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-globe"></i>
+          <span>www.myportfolio.co.uk</span>
+        </div>
+
+          <div class="social-icons">
+             <a href="https://www.linkedin.com/in/priscilla-a-752004272/" target="_blank" class="pink-square">
+                 <img src="images/linkedin2.png" alt="LinkedIn">
+             </a>
+             <a href="https://github.com/xx994" target="_blank" class="pink-square">
+                 <img src="images/github2.png" alt="GitHub">
+             </a>
+          </div>
+
+      </div>
 
     </div>
-  </header>
-  <header class="coolheader">
-  </header>
-  <main>
-     <div class="contains">
-     <section class="home">
+  </div>
+</section>
 
-  <div class="container">
-    <div id="signlogo">    <img src="images\signlogo.png" alt="sign logo"> </div>
-    <div id="introduction">Hi im,</div>
-    <h1>PRISCILLA</h1>
-    <h2>Asamoah</h2>
-  
-  </div>
-  <div class="container-info">
-    <h1>FRONTEND WEB DEVELOPER</h1>
-    <h2> This is my official portfolio website.
-      I showcase my experience and skills.</h2>
-    <a href="https://www.linkedin.com/in/priscilla-asamoah-752004272"><div class="header-main-sm-in"></div></a>
-    <a href="https://github.com/xx994"><div class="header-main-sm-ghb"></div></a>
-  </div>
-     </section>
-  
   </main>
 </body>
-<footer>
-  
-</footer>
-
 </html>
