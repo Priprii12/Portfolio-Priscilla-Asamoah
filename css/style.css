@@ -365,30 +365,6 @@ section {
   }
 }
 
-    /* --- MOBILE RESPONSIVENESS --- */
-    @media (max-width: 768px) {
-      .hero-split {
-        flex-direction: column;
-      }
-      .hero-left, .hero-right {
-        padding: 60px 20px;
-      }
-      .main-name {
-        font-size: 50px;
-      }
-      .script-name {
-        font-size: 50px;
-        transform: rotate(-10deg) translateX(20px);
-      }
-      .dark-section, .white-section, .light-section {
-        padding: 40px 20px;
-        border-width: 0;
-      }
-      .nav-links {
-        display: none;
-      }
-    }
-
 
 /* =========================================
    PORTFOLIO PAGE STYLES (Black Background)
@@ -569,5 +545,85 @@ section {
   }
 }
 
+ /* =========================================
+   MOBILE FIXES (Add to bottom of style.css)
+   ================================********* */
 
+@media (max-width: 768px) {
 
+  /* 1. Fix the Main Container Stacking */
+  .hero-split {
+    flex-direction: column; /* Stacks White on top of Black */
+    margin-top: 60px; /* Space for navbar */
+  }
+
+  /* 2. Fix the White Section (Top) */
+  .hero-left {
+    width: 100%;
+    border-right: none; /* REMOVES THE WEIRD VERTICAL LINE */
+    border-bottom: 5px solid black; /* Adds a clean divider at the bottom instead */
+    padding: 40px 20px;
+    
+    /* Center the Name and Logo */
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Reset margins for the name elements so they center properly */
+  .hero-left .content-wrapper,
+  .intro-text,
+  .signaturelogo, 
+  .script-name {
+    margin: 0 auto; /* Forces everything to center */
+    text-align: center;
+    transform: none; /* Removes fancy rotations that might break mobile */
+  }
+  
+  /* Optional: Make the script name readable on mobile */
+  .script-name {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  /* 3. Fix the Black Section (Bottom) */
+  .hero-right {
+    width: 100%;
+    padding: 60px 20px;
+    
+    /* Center everything */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Fix the text alignment in the black section */
+  .hero-right .content-wrapper {
+    margin: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Make the big text slightly smaller for phone screens */
+  .hero-right h1 {
+    font-size: 32px; 
+    text-align: center;
+  }
+
+  /* 4. Fix the Profile Pic if it's there */
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  /* 5. Navigation Bar Fix */
+  .main-nav {
+    padding: 0 20px; /* Less padding on sides */
+  }
+  
+  .nav-name {
+    font-size: 12px; /* Smaller name in corner */
+  }
+}
