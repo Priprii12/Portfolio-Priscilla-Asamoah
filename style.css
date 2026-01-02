@@ -1,505 +1,629 @@
-*{
+/* =========================================
+   INDEX PAGE STYLES 
+   ================================********* */
+    /* --- RESET & BASICS --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- 
-}
-/* Default styles for all devices */
+    body {
+      font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+    }
 
-/* Small devices (phones) */
-@media (max-width: 576px) {
-  .container {
-    padding-left: 10px;
-  }
-  .container h1 {
-    font-size: 24px;
-  }
-  .container h2 {
-    font-size: 18px;
-  }
-}
-
-/* Medium devices (tablets) */
-@media (min-width: 577px) and (max-width: 768px) {
-  .container {
-    padding-left: 50px;
-  }
-  .container h1 {
-    font-size: 36px;
-  }
-  .container h2 {
-    font-size: 24px;
-  }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    html {
+  scroll-behavior: smooth; /* Makes it scroll nicely instead of jumping */
 }
 
-/* Large devices (desktops) */
-@media (min-width: 769px) {
-  .container {
-    padding-left: 100px;
-  }
-  .container h1 {
-    font-size: 48px;
-  }
-  .container h2 {
-    font-size: 36px;
-  }
+section {
+  scroll-margin-top: 60px; /* The Magic Fix: Stops scrolling 80px above the section */
 }
 
-/* Extra large devices (large desktops or TVs) */
-@media (min-width: 1200px) {
-  .container {
-    padding-left: 150px;
-  }
-  .container h1 {
-    font-size: 60px;
-  }
-  .container h2 {
-    font-size: 48px;
-  }
-}
-.contact-me{
-background-color:white
-}
-#contact-form {
-  width: 50%;
-  margin: 0 auto;
-  margin-bottom: 5px;
-  padding: 20px;
-  background: rgb(22, 22, 22);
+    /* --- NAVIGATION --- */
+    .main-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a:hover {
+      color: #FDBEC9;
+    }
+
+    .nav-name {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* --- HERO SECTION (SPLIT SCREEN) --- */
+    .hero-split {
+      display: flex;
+      min-height: 100vh;
+    
+    
+    }
+
+    .hero-left {
+      flex: 1;
+      background: white;
+      border-bottom: 5px solid black;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+    }
+
+    .hero-right {
+      flex: 1;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      
+    
+    }
+    /* --- DOWNLOAD CV BUTTON --- */
+.btn-download {
+  display: inline-block;
+  background-color: rgb(219, 175, 183); /* Your Theme Pink */
   color: white;
-  border-radius: 5px;
+  padding: 12px 30px;
+  border-radius: 30px; /* Makes it pill-shaped/rounded */
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 25px; /* Spacing between button and social icons */
+  transition: all 0.3s ease;
+  border: 2px solid rgb(219, 175, 183);
 }
 
-#contact-form h2 {
-  text-align: center;
-  margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
+.btn-download:hover {
+  background-color: transparent; /* See-through on hover */
+  color: rgb(219, 175, 183); /* Text turns pink */
+  border: 2px solid rgb(219, 175, 183);
+  transform: translateY(-3px); /* Floats up slightly */
 }
 
-#contact-form input,
-#contact-form textarea,
-#contact-form select {
-  display: block;
+    .content-wrapper {
+    max-width: 500px;
   width: 100%;
-  padding: 8px;
-  margin: 10px 0;
-  border: 1px solid #262424;
-  border-radius: 5px;
-  font-family: "Raleway", sans-serif;;
-}
-.contact-title{
-  margin-top:80px;
-  text-align: center;
-  color: #363636;
-  font-family: 'Playfair Display', serif;
-font-weight: bolder;
-}
-#git {
-  margin-top: 0px; /* Adjust the margin-top value as needed to bring the "Git" text closer to the title */
-  color: rgba(54, 54, 54, 0.79);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 17px;
-  font-style: italic;
-}
-#contact-form input[type="submit"] {
-  background: rgb(219, 175, 183);
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-#contact-form input[type="submit"]:hover {
-  background:  rgb(239, 207, 212);
-}
-
-#projects  {
-
+  text-align: flex-end; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: black; /* Update background color if needed */
-  color: white; /* Set text color to white */
-margin-left:200px;
-margin-top: 1090px;
-}
 
-
-.project-title,
-.project-title2,
-.project-title3
- {
-  font-family: "Raleway", sans-serif;
-  text-align: center;
-}
-.project1-description,
-.project2-description,
-.project3-description{
-  font-family:"Raleway", sans-serif;
-  color: white; /* Set text color to white */
-  text-align: left; /* Center the text */
-font-size: 19px;
-}
-.project-img, 
-.project-img2, 
-.project-img3 {
-  width: 668px; /* Set a specific width for the project images */
-  height: 580px; /* Set a specific height for the project images */
-  margin-left: 180px; /* Adjust the margin as needed */
-  border: 5px solid grey; /* Set the border color to pink */
-}
-
-
-.section_text_p1 {
-  font-size: 24px;
-  margin-top: 30px;
-  color: #eee;
-}
-
-.title {
-  font-size: 48px;
-}
-.project1-description{
-  color: #eee;
   
-}
-.portbody{
-  
-  height: 100vh;
-  overflow-x:  hidden;
-  background: black;
-
-}
-
-
-
-.indexbody{
-  width: 100%;
-  min-height: 100vh; /* Takes up the FULL screen height */
-overflow-x:  hidden;
-
-
-
-background: repeating-linear-gradient(
-  to right,
-  white 0%,
-  white 50%,
-  black 50%,
-  black 100%
-);
-
-display: flex;
-justify-content: flex-start;
-align-items: center;
-
-}
-.coolheader{
-  width: 100%;
-  height: 25px;
-
- position: relative; /* Needs to be positioned to use z-index */
-  z-index: 1000;    /* Higher than the header's 999 */
-display: flex;
-justify-content: space-between;
-}
-
-
-/* 1. The Container (Parent) */
-.header-main {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 80px;
-  background-color: black;
-  z-index: 999;
-  
-  /* THE MAGIC PART */
-  display: flex;
-  justify-content: space-between; /* Pushes children to opposite edges */
-  align-items: center; /* Centers vertically */
-  padding: 0 50px; /* Adds breathing room on sides */
-}
-
-/* 2. The Navigation (Left Side) */
-.header-main-nav {
-  /* No positioning needed here, Flexbox handles it */
-  height: 60px; 
-}
-
-.header-main-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* 3. The Name (Right Side) */
-.header-main h6 {
-  /* RESET your old margins */
-  margin: 0; 
-  padding: 0;
-  height: 30px;
-  white-space: nowrap; /* Keeps name on one line */
-}
-.header-main-nav li{
-  display: inline;
-  float: left;
-  margin-right: 10px;
- 
-}
-.header-main-nav li a{
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-text-decoration: none;
-line-height: 80px;
-color: white;
-
-}
-.header-main-nav li a:hover{
-color: #FDBEC9;
-}
-.header-main-sm{
-  width: 120px;
-height: 100%;
-padding-right: 60px;
-}
-
-
-.container {
-  /* Box Size & Color */
-  width: 600px;
-  height: 400px; /* 900px is very tall, 600px fits better on laptops */
- 
-  top:200px;
-  right: 140%;
-  /* This centers the TEXT inside the Red Box */
-  display: flex;
-  flex-direction: column; /* Stacks text top-to-bottom */
-  justify-content: center; /* Centers vertically */
-  align-items: center;     /* Centers horizontally */
-  /* Reset margins */
-  margin: 0; 
-  position: relative;
-  z-index: 10; /* Ensures it sits on top of the background */
-
-}
-
-#introduction{
-  font-family: 'Playfair Display', serif;
-  color: black; 
-  font-size: 24px;
-  text-align: center;
-  
-  /* DELETE ALL TRANSFORMS so it stays in the box */
-  transform: none; 
-  white-space: nowrap;
-  margin-right: 105%;
-  position: static;
-  }
-  #signlogo img{
-  width: 145px;
-  display: block;
-  transform: none; /* Stop moving it */
-  position: absolute;
-    bottom: 75%;
-    right: 71%;
     }
-.container h1{
- font-family: 'Playfair Display', serif;
-  color: rgb(8, 17, 35);
-  font-size: 80px;
-  text-align: center;
+    .signaturelogo{
+      margin-right: 500px;
+      align-items: start;
+    }
+
+    .intro-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #081123;
+      margin-bottom: 0;
+      margin-right: 350px;
+    }
+
+    .main-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      line-height: 0.9;
+      color: #081123;
+      margin-bottom: 10px;
+    }
+
+    .script-name {
+      font-family: 'Mrs Saint Delafield', cursive;
+      font-size: 70px;
+      color: #081123;
+      transform: rotate(-18deg) translateX(5px) translateY(-20px);
+      display: block;
+    }
   
-  /* Reset positions */
-  width: auto;
-  margin: 0;
-  transform: none;
-  position: static; /* Removes the "left: 60%" issue */
+
+    .hero-right h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .hero-right .sub-text {
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .profile-pic {
   
-    
-}
-.container h2{
-  font-family: 'Mrs Saint Delafield', cursive;
-  font-size: 60px;
-  color: rgb(8, 17, 35);
-  text-align: center;
+ width: 320px; /* Bigger and better! */
+  height: 320px; /* Optional: Forces a square/circle shape if you want */
+  border: 5px solid rgb(219, 175, 183);
+  object-fit: cover; /* Ensures face isn't stretched */
+  margin-top: 30px; /* Space between Name and Face */
+  border-radius: 50%; /* Optional: Makes it a circle (very popular style) */
+    }
+
+    /* --- PINK SQUARE ICONS (FIXED) --- */
+    .social-icons {
+      display: flex;
+      gap: 20px; /* Space between icons */
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .pink-square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;  
+        height: 30px; 
+        margin-top: 25px;
+        margin-left: 5px;
+        background-color: rgb(219, 175, 183); /* Pink */
+        transition: transform 0.2s; 
+        text-decoration: none; /* Remove underline */
+    }
+
+
+    .pink-square:hover {
+        background-color: rgb(239, 207, 212);
+        transform: scale(1.1);
+    }
+
+    /* --- SECTIONS --- */
+    .dark-section {
+      background-color: black;
+      color: white;
+      padding: 20px 10% 80px 10%; 
+      min-height: 80vh; /* 80% of the screen height */
+      border: none; /* No more white border */
+     
+    }
+
+    .light-section {
+      background-color: #eee;
+      padding: 80px 10%;
+      text-align: center;
+       min-height: 80vh; /* 80% of the screen height */
   
-  /* Just a small tilt */
-  transform: rotate(-10deg); 
-  margin-top: -20px;
-  width: auto;
+    }
+
+    .white-section {
+      background-color: white;
+      color: #333;
+      padding: 80px 10%;
+       min-height: 80vh; /* 80% of the screen height */
+  
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+    /* --- EDUCATION SECTION --- */
+    .edu-item, .job-item {
+    margin-bottom: 5px;
+    }
+
+    .edu-item h3, .job-item h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .meta {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: gray;
+    }
+
+    .dark-section .meta {
+      color: #bbb;
+    }
+
+    .quote {
+      border-left: 4px solid pink;
+      padding-left: 20px;
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    .skills-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      border-bottom: 4px solid black;
+    }
+
+/* --- CONTACT SECTION (Split Layout) --- */
+.contact-section {
+  background-color: black;
+  color: white;
+  padding: 60px 10%;
+  border-top: 1px solid #333; /* Subtle divider line */
 }
 
-.container-info {
-/*setting upthe shape,size and colour*/
- height: 400px;
- width: 600px;
-
-  /* This centers the TEXT inside the Red Box */
+.contact-container {
   display: flex;
-  flex-direction: column; /* Stacks text top-to-bottom */
-  justify-content: center; /* Centers vertically */
-  align-items: center;     /* Centers horizontally */
-
-   /* Reset margins */
-  margin: 0; 
-  position: relative;
-  bottom: 210px;
-  z-index: 10; /* Ensures it sits on top of the background */
-   }
-   .container-info h1{
-    /*setting the design of the header*/
-     font-family: "Raleway", sans-serif;
-     color: white;
-     font-size: 36px;
-     font-weight:normal;
-     /*setting the spacing and shape of the header*/
-     text-align: left;
-     letter-spacing: 1px;
-     /* 1. Give it full space to stretch */
-    width: 80%; 
-    /* 2. Remove the giant padding that was squishing it */
-    padding-left: 0; 
-     position: relative;
-     left: 30px;
-     bottom: 50px;
-    
-   }
- .container-info h2{
-   font-family:"Raleway", sans-serif;
-     color: white;
-     font-size: 15px;
-     font-weight:normal;
-     text-align:left;
-     letter-spacing: 1px;
-     width: 65%;
-
-     margin-top: -50px; /* Adjust this value to move h2 up or down */
-padding-left: 0; 
- position: relative;
-     right: 10px;
-      }
-    .header-main-sm-in{
-      width: 20px;
-      height: 20px;
-    background-image: url(../images/linkedin2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  float: left;  
-  position: relative;
-  right: 195px;
-  margin:0;
-
-  }
-  .header-main-sm-ghb{
-    width: 20px;
-    height: 20px;
-    background-image: url(../images/github2.png);
-    background-repeat: no-repeat;
-    background-size: cover;  
-
-   float: left;
-   position: relative;
-   right: 169px;
-   bottom: 20px;
-   margin:0;
-}
-#sign-up{
-  height: 600px;
-  background-color: #eee;
-  text-align: left;
-  padding: 10px;
-
-}
-#education {
-
-  padding: 0px;
-  margin-top: 5px;
-  margin-left: 20px; 
-  background-color:black; /* Change the background color to pink */
-  height: 110vh; /* Set the height to cover the full viewport height */
-  border: 18px solid white; /* Add a black border with 2px thickness */
-
+  gap: 50px; /* Space between Form and Info */
+  flex-wrap: wrap; /* Wraps on mobile */
+  align-items: flex-start;
 }
 
+/* LEFT SIDE: Form Styling */
+.contact-left {
+  flex: 1.5; /* Takes up slightly more space */
+}
 
-#education h1 {
+.simple-form input, 
+.simple-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a; /* Dark Grey Input background */
+  border: 1px solid #333;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 4px; /* Slight curve */
+}
+
+.simple-form input:focus, 
+.simple-form textarea:focus {
+  outline: none;
+  border-color: rgb(219, 175, 183); /* Pink focus border */
+}
+
+.simple-form button {
+  background-color: rgb(219, 175, 183);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
   font-weight: bold;
-  font-family:'Playfair Display', serif; 
-  font-size: 36px;
-  color: black;
-  text-align: center;
+  letter-spacing: 1px;
+  transition: background 0.3s;
 }
 
-#education p {
-  
-  font-size: 16px;
-  color: black;
-  text-align: left;
+.simple-form button:hover {
+  background-color: rgb(239, 207, 212);
+}
+
+/* RIGHT SIDE: Info Styling */
+.contact-right {
+  flex: 1;
+}
+
+.contact-right h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: rgb(219, 175, 183);
+}
+
+.contact-desc {
+  color: #ccc;
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 
-#ratings-container {
+.info-item {
   display: flex;
-  justify-content: space-between;
+  align-items: left;
+  margin-left: -30px;
+  margin-bottom: 8px;
+}
+
+.info-item i {
+  color: rgb(219, 175, 183);
+  width: 25px;
+  margin-right: 10px;
+  margin: top -150px;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack them on phone */
+  }
+}
+
+
+/* =========================================
+   PORTFOLIO PAGE STYLES (Black Background)
+   ================================********* */
+
+/* 1. Page Background & Reset */
+.portbody {
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden; /* Prevents side scrolling */
+}
+
+/* 2. Navigation (Matches your Index page) */
+.header-main {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  z-index: 1000;
+  display: flex;
   align-items: center;
-  height: 600px; /* Set a specific height for the container */
+  justify-content: space-between;
+  padding: 0 50px;
+  border-bottom: 1px solid #333; /* Subtle divider */
 }
 
-#htmlrating{
-  margin-bottom: 360px;
- margin-left:10px;
+.header-main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-
-#jsrating {
-margin-bottom: 400px;
-margin-left:80px;
+.header-main-nav li {
+  margin-right: 30px;
 }
 
-#cssrating {
-
-  margin-bottom: 460px;
-  margin-right: 2px;
-}
-#experience-container {
-  bottom:31%;
-  position: relative; 
-  background-color: white;
-  height: 100vh;
-  transform: translateX(-37px) translateY(-200px);
-width: 50%;
-
-}
-#work-experience h2,
-#interests h2,
-#skills h2{
-  font-family:'Playfair Display', serif; 
-margin-top: 38px;
-}
-#htmlimg img {
-
-  height: auto; /* Automatically adjust the height to maintain aspect ratio */
-  margin-left: 0px; /* Adjust the value to move the image to the right */
-margin-top: 10px;
-
-}
-#contact-info img{
-  width:220px;
-  margin-right: 20px;
-  border: 6px solid pink ;
-}
-#contact-info {
-
-  margin-left: 900px;
-transform: translateY(-700px) translateX(10px);
-
+.header-main-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.contact-info p{
+.header-main-nav a:hover {
+  color: #FDBEC9; /* Your Pink Hover Color */
+}
+
+/* 3. Main Project Section Layout */
+/* 3. Main Project Section Layout */
+/* =========================================
+   PROJECT SECTION (CLEAN & CENTERED)
+   ================================********* */
+
+/* 1. Main Section Wrapper */
+#projects {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 2. Main Titles (e.g., "Browse My Recent") */
+.section_text_p1 {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+}
+
+/* 3. Individual Project Container (Holds Image + Text) */
+.detailes-container {
+  margin-bottom: 80px;
+  width: 90%;          /* Uses percentage so it fits mobile */
+  max-width: 900px;    /* Stops it from getting too wide */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Forces everything to the center line */
+}
+
+/* 4. Project Images */
+/* NOTE: We list all classes to make sure they all behave the same */
+.project-img, 
+.project-img2, 
+.project-img3,
+.project-img4, 
+.project-img5, 
+.project-img6 {
+  width: 100%;
+  max-width: 700px;
+  
+  /* THE FIX: 450px is the happy medium between "too small" and "too tall" */
+  height: 450px; 
+  
+  border: 5px solid grey;
+  
+  /* IMPORTANT FIX: Images should be 'block', not 'flex' */
+  display: block; 
+  
+  margin-bottom: 30px; /* Space between Image and Title */
+ 
+}
+
+/* 5. Project Titles */
+.project-title,
+.project-title2,
+.project-title3,
+.project-title4,
+.project-title5,
+.project-title6 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 35px;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+/* 6. Project Descriptions */
+.project1-description,
+.project2-description,
+.project3-description,
+.project4-description,
+.project5-description,
+.project6-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
   color: #eee;
-  font-family:'Playfair Display', serif;
+  
+  /* ALIGNMENT FIX */
+  text-align: center; /* Centers the words */
+  margin: 0 auto;     /* Centers the invisible text box */
+  
+  line-height: 1.6;
+  
+  /* TRICK: Making text slightly narrower than the image looks cleaner */
+  max-width: 650px; 
+  width: 100%;
+  
+  font-weight: 300;
+  font-style: normal; /* Ensures no italics */
+}
+/* Hide the decorative dot if it interferes, or style it */
+.coolheader {
+  display: none; /* Hides the blackdot image unless you really need it */
 }
 
+/* 7. Mobile Adjustments */
+@media (max-width: 768px) {
+  .header-main {
+    padding: 0 20px;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .project-title, .project-title2, .project-title3 {
+    font-size: 24px;
+  }
+  
+  .project1-description, .project2-description, .project3-description {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+}
+
+ /* =========================================
+   MOBILE FIXES (Add to bottom of style.css)
+   ================================********* */
+
+@media (max-width: 768px) {
+
+  /* 1. Fix the Main Container Stacking */
+  .hero-split {
+    flex-direction: column; /* Stacks White on top of Black */
+    margin-top: 60px; /* Space for navbar */
+  }
+
+  /* 2. Fix the White Section (Top) */
+  .hero-left {
+    width: 100%;
+    border-right: none; /* REMOVES THE WEIRD VERTICAL LINE */
+    border-bottom: 5px solid black; /* Adds a clean divider at the bottom instead */
+    padding: 40px 20px;
+    
+    /* Center the Name and Logo */
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Reset margins for the name elements so they center properly */
+  .hero-left .content-wrapper,
+  .intro-text,
+  .signaturelogo, 
+  .script-name {
+    margin: 0 auto; /* Forces everything to center */
+    text-align: center;
+    transform: none; /* Removes fancy rotations that might break mobile */
+  }
+  
+  /* Optional: Make the script name readable on mobile */
+  .script-name {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  /* 3. Fix the Black Section (Bottom) */
+  .hero-right {
+    width: 100%;
+    padding: 60px 20px;
+    
+    /* Center everything */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Fix the text alignment in the black section */
+  .hero-right .content-wrapper {
+    margin: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Make the big text slightly smaller for phone screens */
+  .hero-right h1 {
+    font-size: 32px; 
+    text-align: center;
+  }
+
+  /* 4. Fix the Profile Pic if it's there */
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  /* 5. Navigation Bar Fix */
+  .main-nav {
+    padding: 0 20px; /* Less padding on sides */
+  }
+  
+  .nav-name {
+    font-size: 12px; /* Smaller name in corner */
+  }
+}
