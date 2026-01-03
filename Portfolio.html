@@ -132,9 +132,17 @@ Tech Stack: Python, NLTK/Spacy, TensorFlow </em></h3><br><br><br><br><br><br>
     </div>
   </div>
 </section>
+ <script>
+  const toggleButton = document.getElementsByClassName('toggle-button')[0];
+  const navbarLinks = document.getElementsByClassName('nav-links')[0];
 
+  toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+  });
+</script>
 
 </main>
+
 </body>
 <footer></footer>
 </html>
