@@ -2,145 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priscilla Asamoah | Portfolio</title>
   <link rel="icon" href="images/favicon2.png" type="image/x-icon"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" />
+  
+  <!-- FontAwesome (Fixes your missing icons!) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <script defer src="js/basic.js"></script>
 </head>
+
 <body class="portbody">
 
- <nav class="main-nav">
-
-  <!-- 2. The Hamburger Button (Only shows on mobile) -->
-  <a href="#" class="toggle-button">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </a>
-    <div class="nav-links">
-      <a href="index.html">HOME</a>
-      <a href="#education">EDUCATION</a>
-      <a href="#skills">SKILLS</a> 
-      <a href="#work-experience">EXPERIENCE</a>
-       <a href="Portfolio.html">PORTFOLIO</a>
-      <a href="#contact">CONTACT</a>
-    </div>
+  <nav class="main-nav">
     <div class="nav-name">PRISCILLA ASAMOAH</div>
+
+    <!-- The Hamburger Button -->
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    
+    <div class="nav-links">
+      <!-- FIXED LINKS: Point back to index.html -->
+      <a href="index.html">HOME</a>
+      <a href="index.html#education">EDUCATION</a>
+      <a href="index.html#skills">SKILLS</a> 
+      <a href="index.html#work-experience">EXPERIENCE</a>
+      <a href="Portfolio.html">PORTFOLIO</a>
+      <a href="portfolio.html#contact">CONTACT</a>
+    </div>
   </nav>
 
-
-  
-  </div>
-  <div class="header-main-sm"></div>
-</header>
-<header class="coolheader">
-    <img src="images\blackdot.png" alt="blackdot">
-</header>
 <main>
   <section id="projects">
     <p class="section_text_p1">Browse My Recent</p>
     <h1 class="title">Portfolios</h1>
     <div class="experience-details-container">
-      <div class="detailes-container color-container">
-        <div class="article-container">
-           <img src="images/ROCStroke.png" alt="Project 1" class="project-img" />
-        </div>
-        <br>
-        <h2 class="experience-subtitle project-title">Stroke Prediction (Ensemble Learning)</h2>
-        <h3 class="project1-description"><em> A predictive machine learning model designed to identify high-risk stroke patients. Utilizes Ensemble Learning techniques to combine multiple algorithms, achieving superior accuracy compared to single-model approaches. Features include advanced data preprocessing (imputation) and handling class imbalance.
-         <br>Tech Stack: Python, Pandas, Scikit-learn</em></h3><br><br><br><br><br><br>
+      
+      <!-- PROJECT 1 -->
+      <div class="detailes-container">
+        <img src="images/ROCStroke.png" alt="Stroke Prediction" class="project-img" />
+        <h2 class="project-title">Stroke Prediction (Ensemble Learning)</h2>
+        <p class="project1-description">
+           A predictive machine learning model designed to identify high-risk stroke patients. Utilizes Ensemble Learning techniques to combine multiple algorithms, achieving superior accuracy compared to single-model approaches. Features include advanced data preprocessing (imputation) and handling class imbalance.
+           <br><br><strong>Tech Stack: Python, Pandas, Scikit-learn</strong>
+        </p>
       </div>
-      <div class="detailes-container color-container">
-        <div class="article-container">
-          <img src="images/NLPClassCM.png" alt="Project 2" class="project-img2" />
-        </div>
-        <br>
-        <h2 class="experience-subtitle project-title2">NLP Emotion Classifier</h2>
-        <h3 class="project2-description">
-<em>A Natural Language Processing (NLP) system capable of analyzing text and categorizing it into distinct emotional states. Implements text preprocessing (tokenization, stop-word removal) and machine learning classifiers to interpret sentiment from unstructured user data.<br>
-Tech Stack: Python, NLTK/Spacy, TensorFlow </em></h3><br><br><br><br><br><br>
+
+      <!-- PROJECT 2 -->
+      <div class="detailes-container">
+        <img src="images/NLPClassCM.png" alt="NLP Emotion Classifier" class="project-img2" />
+        <h2 class="project-title2">NLP Emotion Classifier</h2>
+        <p class="project2-description">
+          A Natural Language Processing (NLP) system capable of analyzing text and categorizing it into distinct emotional states. Implements text preprocessing (tokenization, stop-word removal) and machine learning classifiers to interpret sentiment from unstructured user data.
+          <br><br><strong>Tech Stack: Python, NLTK/Spacy, TensorFlow</strong>
+        </p>
       </div>
-      <div class="detailes-container color-container">
-        <div class="article-container">
-          <img src="images/CIResults.png" alt="Project 3" class="project-img3" />
-        </div>
-        <br>
-        <h2 class="experience-subtitle project-title3">Logistic Optimization (PSO)</h2>
-        <h3 class="project3-description"> <em>A Computational Intelligence solution applying the Particle Swarm Optimization (PSO) algorithm to solve complex logistics routing problems. Demonstrates the use of bio-inspired heuristic search strategies to find optimal paths and maximize efficiency. The figure demonstrates the Convergence comparison. The Baseline (Fixed inertia) stagnates around error 23.83, while the Novel solution (Adaptive inertia) continues to optimize, reaching a final error of 20.08
-<br>Tech Stack: Python / Java</em></h3><br><br><br><br><br><br>
+
+      <!-- PROJECT 3 -->
+      <div class="detailes-container">
+        <img src="images/CIResults.png" alt="Logistic Optimization" class="project-img3" />
+        <h2 class="project-title3">Logistic Optimization (PSO)</h2>
+        <p class="project3-description">
+           A Computational Intelligence solution applying the Particle Swarm Optimization (PSO) algorithm to solve complex logistics routing problems. Demonstrates the use of bio-inspired heuristic search strategies to find optimal paths and maximize efficiency. The figure demonstrates the Convergence comparison. The Baseline (Fixed inertia) stagnates around error 23.83, while the Novel solution (Adaptive inertia) continues to optimize, reaching a final error of 20.08.
+           <br><br><strong>Tech Stack: Python / Java</strong>
+        </p>
+      </div>
     
-          <img src="images/loginecom.jpeg" alt="Project 4" class="project-img4" />
-        </div>
-        <br>
-        <h2 class="experience-subtitle project-title4">Team E-Commerce Project</h2>
-        <h3 class="project4-description"><em>A full-stack e-commerce platform built collaboratively by a team of 9. Developed using PHP (Laravel) for robust backend architecture and MySQL for relational data management. My role focused on implementing secure Authentication (Login/Logout), database configuration, and managing Version Control (Git/GitHub) to coordinate development workstreams.<br>Tech Stack: PHP, Laravel, MySQL, GitHub, Agile (Trello)</em></h3><br><br><br><br><br><br>
+      <!-- PROJECT 4 (Fixed Structure) -->
+      <div class="detailes-container">
+          <img src="images/loginecom.jpeg" alt="E-Commerce Project" class="project-img4" />
+          <h2 class="project-title4">Team E-Commerce Project</h2>
+          <p class="project4-description">
+            A full-stack e-commerce platform built collaboratively by a team of 9. Developed using PHP (Laravel) for robust backend architecture and MySQL for relational data management. My role focused on implementing secure Authentication (Login/Logout), database configuration, and managing Version Control (Git/GitHub) to coordinate development workstreams.
+            <br><br><strong>Tech Stack: PHP, Laravel, MySQL, GitHub, Agile (Trello)</strong>
+          </p>
       </div>
+
     </div>
   </section>
 
    <!-- CONTACT SECTION -->
-<section id="contact" class="contact-section">
-  <div class="container-fluid">
-    <h2 class="section-title">CONTACT ME</h2>
-    
-    <div class="contact-container">
+  <section id="contact" class="contact-section">
+    <div class="container-fluid">
+      <h2 class="section-title">CONTACT ME</h2>
       
-      <!-- LEFT SIDE: The Form -->
-      <div class="contact-left">
-        <form action="#" method="POST" class="simple-form">
-          <input type="text" placeholder="Name" required>
-          <input type="email" placeholder="Email" required>
-          <textarea placeholder="Message" rows="5" required></textarea>
-          <button type="submit">SEND MESSAGE</button>
-        </form>
-      </div>
-
-      <!-- RIGHT SIDE: Info & Socials -->
-      <div class="contact-right">
-        <h3>Let's Connect</h3>
-        <p class="contact-desc">
-          I am currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-        </p>
+      <div class="contact-container">
         
-        <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Birmingham, UK</span>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-envelope"></i>
-          <span>230168011@aston.ac.uk</span>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-globe"></i>
-          <span>www.myportfolio.co.uk</span>
+        <!-- LEFT SIDE: The Form -->
+        <div class="contact-left">
+          <form action="#" method="POST" class="simple-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit">SEND MESSAGE</button>
+          </form>
         </div>
 
-          <div class="social-icons">
-             <a href="https://www.linkedin.com/in/priscilla-a-752004272/" target="_blank" class="pink-square">
-                 <img src="images/linkedin2.png" alt="LinkedIn">
-             </a>
-             <a href="https://github.com/xx994" target="_blank" class="pink-square">
-                 <img src="images/github2.png" alt="GitHub">
-             </a>
+        <!-- RIGHT SIDE: Info & Socials -->
+        <div class="contact-right">
+          <h3>Let's Connect</h3>
+          <p class="contact-desc">
+            I am currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+          </p>
+          
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Birmingham, UK</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <span>230168011@aston.ac.uk</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-globe"></i>
+            <span>https://priprii12.github.io/Portfolio-Priscilla-Asamoah/</span>
           </div>
 
-      </div>
+            <div class="social-icons">
+               <a href="https://www.linkedin.com/in/priscilla-a-752004272/" target="_blank" class="pink-square">
+                   <img src="images/linkedin2.png" alt="LinkedIn">
+               </a>
+               <a href="https://github.com/xx994" target="_blank" class="pink-square">
+                   <img src="images/github2.png" alt="GitHub">
+               </a>
+            </div>
 
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
- <script>
+  </section>
+</main>
+
+<!-- SCRIPT MOVED TO BOTTOM FOR PERFORMANCE -->
+<script>
   const toggleButton = document.getElementsByClassName('toggle-button')[0];
   const navbarLinks = document.getElementsByClassName('nav-links')[0];
 
-  toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active');
-  });
+  if(toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
+  }
 </script>
 
-</main>
-
 </body>
-<footer></footer>
 </html>
