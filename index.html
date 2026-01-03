@@ -25,7 +25,7 @@
 
 <body>
   
-<nav class="main-nav">
+  <nav class="main-nav">
 
   <!-- 2. The Hamburger Button (Only shows on mobile) -->
   <a href="#" class="toggle-button">
@@ -43,6 +43,7 @@
     </div>
     <div class="nav-name">PRISCILLA ASAMOAH</div>
   </nav>
+
   <main>
     <section class="hero-split">
       <div class="hero-left">
@@ -197,7 +198,7 @@ Maintained a 100% positive customer feedback rating through excellent service an
         </div>
         <div class="info-item">
           <i class="fas fa-globe"></i>
-          <span>www.myportfolio.co.uk</span>
+          <span>https://priprii12.github.io/Portfolio-Priscilla-Asamoah/</span>
         </div>
 
           <div class="social-icons">
@@ -213,6 +214,27 @@ Maintained a 100% positive customer feedback rating through excellent service an
 
     </div>
   </div>
+<script>
+  const toggleButton = document.getElementsByClassName('toggle-button')[0];
+  const navbarLinks = document.getElementsByClassName('nav-links')[0];
+
+  // 1. Toggle the menu when the button is clicked
+  toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+  });
+
+  // 2. Select all 'a' tags (links) INSIDE the nav-links div
+  const links = document.querySelectorAll(".nav-links a");
+
+  // 3. Add a click event to EVERY link to close the menu
+  links.forEach(link => {
+      link.addEventListener("click", () => {
+          navbarLinks.classList.remove("active");
+          // If you have animation on the button, remove active from it too:
+          // toggleButton.classList.remove("active"); 
+      });
+  });
+</script>
 </section>
 
   </main>
