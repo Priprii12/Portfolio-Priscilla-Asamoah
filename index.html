@@ -3,25 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
   <title>Priscilla Asamoah | Portfolio</title>
-  
-  <!-- FIXED: Use forward slash / -->
-  <link rel="icon" href="images/favicon2.png" type="image/x-icon" />
+  <link rel="icon" href="images\favicon2.png" type="image/x-icon" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Put this in your HTML <head> if it is missing -->
   <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
-  
-  <!-- FIXED: Added FontAwesome so your Contact Icons work -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <!-- File links -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <!-- If basic.js is empty, you can remove this line -->
   <script defer src="js/basic.js"></script>
 
 </head>
@@ -29,15 +26,6 @@
 <body>
   
   <nav class="main-nav">
-     <div class="nav-name">PRISCILLA ASAMOAH</div>
-    
-    <!-- The Hamburger Button -->
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-  
     <div class="nav-links">
       <a href="index.html">HOME</a>
       <a href="#education">EDUCATION</a>
@@ -46,11 +34,11 @@
        <a href="Portfolio.html">PORTFOLIO</a>
       <a href="#contact">CONTACT</a>
     </div>
+    <div class="nav-name">PRISCILLA ASAMOAH</div>
   </nav>
 
   <main>
     <section class="hero-split">
-      <!-- LEFT SIDE: Name + Photo -->
       <div class="hero-left">
         <div class="content-wrapper">
           <div class="sign-logo">
@@ -61,25 +49,25 @@
           <h2 class="script-name">Asamoah</h2>
         </div>
 
-        <!-- Image moved here (Correct!) -->
-        <div class="hero-image-container">
-           <img src="images/me.jpg" alt="Priscilla" class="profile-pic">
-        </div>
+          <div class="hero-image-container">
+       <img src="images/me.jpg" alt="Priscilla" class="profile-pic">
+    </div>
+
       </div>
 
-      <!-- RIGHT SIDE: Text + Buttons -->
       <div class="hero-right">
         <div class="content-wrapper">
           <h1>DATA DRIVEN DEVELOPER</h1>
           <p class="sub-text">This is my official portfolio website. I am passionate and enjoy everything data science. I showcase my experience, projects and skills.</p>
           
+          <!-- NEW DOWNLOAD BUTTON -->
           <a href="images/PriscillaCSCV.pdf" download class="btn-download">
               Download CV
           </a>
 
+          <!-- SOCIAL ICONS: PINK SQUARES WITH IMAGES -->
           <div class="social-icons">
              <a href="https://www.linkedin.com/in/priscilla-a-752004272/" target="_blank" class="pink-square">
-                 <!-- Make sure to use FontAwesome icons here if you prefer, or keep images -->
                  <img src="images/linkedin2.png" alt="LinkedIn">
              </a>
              <a href="https://github.com/xx994" target="_blank" class="pink-square">
@@ -118,6 +106,7 @@
           <p class="meta">All Saints Academy Dunstable (2017-2021)</p>
           <ul>
             <li>Achieved 9 GCSEs (Grades 9-4) including Mathematics, English, and Science.</li>
+
           </ul>
         </div>
 
@@ -132,15 +121,15 @@
       <div class="skills-grid">
         <div class="skill-card">
           <h3>MACHINE LEARNING</h3>
-          <p>Expertise rating: ★★★★☆ <br> <small>Proficient</small></p>
+          <p>Expertise rating: ★★★★☆</p> Proficient
         </div>
         <div class="skill-card">
           <h3>PYTHON</h3>
-          <p>Expertise rating: ★★★★☆ <br> <small>Proficient</small></p>
+          <p>Expertise rating: ★★★★☆</p> Proficient
         </div>
         <div class="skill-card">
           <h3>SQL</h3>
-          <p>Expertise rating: ★★★☆☆ <br> <small>Familiar</small></p>
+          <p>Expertise rating: ★★★☆☆</p> Familiar
         </div>
       </div>
     </section>
@@ -169,67 +158,57 @@ Maintained a 100% positive customer feedback rating through excellent service an
     </section>
 
    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section">
-      <div class="container-fluid">
-        <h2 class="section-title">CONTACT ME</h2>
-        
-        <div class="contact-container">
-          
-          <!-- LEFT SIDE: The Form -->
-          <div class="contact-left">
-            <form action="#" method="POST" class="simple-form">
-              <input type="text" placeholder="Name" required>
-              <input type="email" placeholder="Email" required>
-              <textarea placeholder="Message" rows="5" required></textarea>
-              <button type="submit">SEND MESSAGE</button>
-            </form>
-          </div>
-
-          <!-- RIGHT SIDE: Info & Socials -->
-          <div class="contact-right">
-            <h3>Let's Connect</h3>
-            <p class="contact-desc">
-              I am currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-            </p>
-            
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Birmingham, UK</span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <span>230168011@aston.ac.uk</span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-globe"></i>
-              <span>www.myportfolio.co.uk</span>
-            </div>
-
-              <div class="social-icons">
-                 <a href="https://www.linkedin.com/in/priscilla-a-752004272/" target="_blank" class="pink-square">
-                     <img src="images/linkedin2.png" alt="LinkedIn">
-                 </a>
-                 <a href="https://github.com/xx994" target="_blank" class="pink-square">
-                     <img src="images/github2.png" alt="GitHub">
-                 </a>
-              </div>
-
-          </div>
-        </div>
+<section id="contact" class="contact-section">
+  <div class="container-fluid">
+    <h2 class="section-title">CONTACT ME</h2>
+    
+    <div class="contact-container">
+      
+      <!-- LEFT SIDE: The Form -->
+      <div class="contact-left">
+        <form action="#" method="POST" class="simple-form">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" rows="5" required></textarea>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
       </div>
-    </section>
+
+      <!-- RIGHT SIDE: Info & Socials -->
+      <div class="contact-right">
+        <h3>Let's Connect</h3>
+        <p class="contact-desc">
+          I am currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        </p>
+        
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Birmingham, UK</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span>230168011@aston.ac.uk</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-globe"></i>
+          <span>www.myportfolio.co.uk</span>
+        </div>
+
+          <div class="social-icons">
+             <a href="https://www.linkedin.com/in/priscilla-a-752004272/" target="_blank" class="pink-square">
+                 <img src="images/linkedin2.png" alt="LinkedIn">
+             </a>
+             <a href="https://github.com/xx994" target="_blank" class="pink-square">
+                 <img src="images/github2.png" alt="GitHub">
+             </a>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
   </main>
-
-<!-- FIXED: Script moved to bottom of body -->
-<script>
-  const toggleButton = document.getElementsByClassName('toggle-button')[0];
-  const navbarLinks = document.getElementsByClassName('nav-links')[0];
-
-  toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active');
-  });
-</script>
-
 </body>
 </html>
