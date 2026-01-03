@@ -1,296 +1,339 @@
 /* =========================================
-   INDEX PAGE STYLES 
+   1. RESET & BASICS
    ================================********* */
-    /* --- RESET & BASICS --- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Raleway', sans-serif;
-      overflow-x: hidden;
-    }
+body {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    html {
-  scroll-behavior: smooth; /* Makes it scroll nicely instead of jumping */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 section {
-  scroll-margin-top: 60px; /* The Magic Fix: Stops scrolling 80px above the section */
+  scroll-margin-top: 60px; /* Offsets scroll for fixed header */
 }
 
-    /* --- NAVIGATION --- */
-    .main-nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 60px;
-      background: black;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 40px;
-      z-index: 1000;
-    }
+/* =========================================
+   2. NAVIGATION BAR
+   ================================********* */
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+}
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      margin-right: 15px;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
-    .nav-links a:hover {
-      color: #FDBEC9;
-    }
+.nav-links li {
+  margin-right: 0;
+}
 
-    .nav-name {
-      color: white;
-      font-size: 14px;
-      font-weight: bold;
-    }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+}
 
-    /* --- HERO SECTION (SPLIT SCREEN) --- */
-    .hero-split {
-      display: flex;
-      min-height: 100vh;
-    
-    
-    }
+.nav-links a:hover {
+  color: #FDBEC9;
+}
 
-    .hero-left {
-      flex: 1;
-      background: white;
-      border-bottom: 5px solid black;
-      display: flex;
-      justify-content: right;
-      align-items: center;
-      padding: 40px;
-      position: relative;
-    }
+.nav-name {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-    .hero-right {
-      flex: 1;
-      background: black;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+/* HAMBURGER MENU (Hidden on Desktop) */
+.toggle-button {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 2000;
+}
 
-      
-    
-    }
-    /* --- DOWNLOAD CV BUTTON --- */
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* =========================================
+   3. HERO SECTION (SPLIT SCREEN)
+   ================================********* */
+.hero-split {
+  display: flex;
+  min-height: 100vh;
+  margin-top: 60px; /* Space for navbar */
+}
+
+/* Left Side (White) */
+.hero-left {
+  flex: 1;
+  background: white;
+  border-bottom: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Right Side (Black) */
+.hero-right {
+  flex: 1;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centered */
+  align-items: center;     /* Horizontally centered */
+  padding: 40px;
+}
+
+/* Content & Typography */
+.content-wrapper {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.intro-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #081123;
+  margin: 0;
+}
+
+.main-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  line-height: 0.9;
+  color: #081123;
+  margin-bottom: 10px;
+}
+
+.script-name {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 70px;
+  color: #081123;
+  transform: rotate(-10deg) translateX(20px);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 320px;
+  height: 320px;
+  border: 5px solid rgb(219, 175, 183);
+  object-fit: cover;
+  border-radius: 50%; /* Optional circle */
+  margin-top: 20px;
+}
+
+/* Hero Right Text */
+.hero-right h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.hero-right .sub-text {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Download Button */
 .btn-download {
   display: inline-block;
-  background-color: rgb(219, 175, 183); /* Your Theme Pink */
+  background-color: rgb(219, 175, 183);
   color: white;
   padding: 12px 30px;
-  border-radius: 30px; /* Makes it pill-shaped/rounded */
+  border-radius: 30px;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 25px; /* Spacing between button and social icons */
-  transition: all 0.3s ease;
+  margin-bottom: 25px;
   border: 2px solid rgb(219, 175, 183);
+  transition: all 0.3s ease;
 }
 
 .btn-download:hover {
-  background-color: transparent; /* See-through on hover */
-  color: rgb(219, 175, 183); /* Text turns pink */
-  border: 2px solid rgb(219, 175, 183);
-  transform: translateY(-3px); /* Floats up slightly */
+  background-color: transparent;
+  color: rgb(219, 175, 183);
 }
 
-    .content-wrapper {
-    max-width: 500px;
-  width: 100%;
-  text-align: flex-end; 
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pink-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(219, 175, 183);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.pink-square img {
+  width: 20px;
+  height: auto;
+}
+
+.pink-square:hover {
+  transform: scale(1.1);
+  background-color: rgb(239, 207, 212);
+}
+
+/* =========================================
+   4. SECTIONS (Education, Skills, etc.)
+   ================================********* */
+.dark-section {
+  background-color: black;
+  color: white;
+  padding: 60px 10%;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+}
 
-  
-    }
-    .signaturelogo{
-      margin-right: 500px;
-      align-items: start;
-    }
+.light-section {
+  background-color: #eee;
+  padding: 60px 10%;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .intro-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      color: #081123;
-      margin-bottom: 0;
-      margin-right: 350px;
-    }
+.white-section {
+  background-color: white;
+  color: #333;
+  padding: 60px 10%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .main-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 80px;
-      line-height: 0.9;
-      color: #081123;
-      margin-bottom: 10px;
-    }
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-    .script-name {
-      font-family: 'Mrs Saint Delafield', cursive;
-      font-size: 70px;
-      color: #081123;
-      transform: rotate(-18deg) translateX(5px) translateY(-20px);
-      display: block;
-    }
-  
+/* Education Items */
+.edu-item, .job-item {
+  margin-bottom: 30px;
+}
 
-    .hero-right h1 {
-      font-family: 'Raleway', sans-serif;
-      font-size: 36px;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-    }
+.edu-item h3, .job-item h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: rgb(219, 175, 183); /* Pink headers */
+}
 
-    .hero-right .sub-text {
-      font-size: 16px;
-      margin-bottom: 30px;
-      line-height: 1.5;
-    }
+.meta {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: gray;
+}
 
-    .profile-pic {
-  
- width: 320px; /* Bigger and better! */
-  height: 320px; /* Optional: Forces a square/circle shape if you want */
-  border: 5px solid rgb(219, 175, 183);
-  object-fit: cover; /* Ensures face isn't stretched */
-  margin-top: 30px; /* Space between Name and Face */
-  border-radius: 50%; /* Optional: Makes it a circle (very popular style) */
-    }
+.dark-section .meta {
+  color: #bbb;
+}
 
-    /* --- PINK SQUARE ICONS (FIXED) --- */
-    .social-icons {
-      display: flex;
-      gap: 20px; /* Space between icons */
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
+.quote {
+  border-left: 4px solid pink;
+  padding-left: 20px;
+  margin-top: 40px;
+  font-style: italic;
+}
 
-    .pink-square {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;  
-        height: 30px; 
-        margin-top: 25px;
-        margin-left: 5px;
-        background-color: rgb(219, 175, 183); /* Pink */
-        transition: transform 0.2s; 
-        text-decoration: none; /* Remove underline */
-    }
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
+.skill-card {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  border-bottom: 4px solid black;
+}
 
-    .pink-square:hover {
-        background-color: rgb(239, 207, 212);
-        transform: scale(1.1);
-    }
-
-    /* --- SECTIONS --- */
-    .dark-section {
-      background-color: black;
-      color: white;
-      padding: 20px 10% 80px 10%; 
-      min-height: 80vh; /* 80% of the screen height */
-      border: none; /* No more white border */
-     
-    }
-
-    .light-section {
-      background-color: #eee;
-      padding: 80px 10%;
-      text-align: center;
-       min-height: 80vh; /* 80% of the screen height */
-  
-    }
-
-    .white-section {
-      background-color: white;
-      color: #333;
-      padding: 80px 10%;
-       min-height: 80vh; /* 80% of the screen height */
-  
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      margin-bottom: 40px;
-      text-transform: uppercase;
-    }
-    /* --- EDUCATION SECTION --- */
-    .edu-item, .job-item {
-    margin-bottom: 5px;
-    }
-
-    .edu-item h3, .job-item h3 {
-      font-size: 22px;
-      margin-bottom: 5px;
-    }
-
-    .meta {
-      font-style: italic;
-      margin-bottom: 10px;
-      color: gray;
-    }
-
-    .dark-section .meta {
-      color: #bbb;
-    }
-
-    .quote {
-      border-left: 4px solid pink;
-      padding-left: 20px;
-      margin-top: 40px;
-      font-style: italic;
-    }
-
-    .skills-grid {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-    .skill-card {
-      background: white;
-      padding: 20px;
-      margin: 10px;
-      width: 250px;
-      border-bottom: 4px solid black;
-    }
-
-/* --- CONTACT SECTION (Split Layout) --- */
+/* =========================================
+   5. CONTACT SECTION
+   ================================********* */
 .contact-section {
   background-color: black;
   color: white;
   padding: 60px 10%;
-  border-top: 1px solid #333; /* Subtle divider line */
+  border-top: 1px solid #333;
 }
 
 .contact-container {
   display: flex;
-  gap: 50px; /* Space between Form and Info */
-  flex-wrap: wrap; /* Wraps on mobile */
+  gap: 50px;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 
-/* LEFT SIDE: Form Styling */
 .contact-left {
-  flex: 1.5; /* Takes up slightly more space */
+  flex: 1.5;
 }
 
 .simple-form input, 
@@ -298,17 +341,11 @@ section {
   width: 100%;
   padding: 15px;
   margin-bottom: 20px;
-  background-color: #1a1a1a; /* Dark Grey Input background */
+  background-color: #1a1a1a;
   border: 1px solid #333;
   color: white;
   font-family: 'Raleway', sans-serif;
-  border-radius: 4px; /* Slight curve */
-}
-
-.simple-form input:focus, 
-.simple-form textarea:focus {
-  outline: none;
-  border-color: rgb(219, 175, 183); /* Pink focus border */
+  border-radius: 4px;
 }
 
 .simple-form button {
@@ -318,15 +355,8 @@ section {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  letter-spacing: 1px;
-  transition: background 0.3s;
 }
 
-.simple-form button:hover {
-  background-color: rgb(239, 207, 212);
-}
-
-/* RIGHT SIDE: Info Styling */
 .contact-right {
   flex: 1;
 }
@@ -346,108 +376,19 @@ section {
 
 .info-item {
   display: flex;
-  align-items: left;
-  margin-left: -30px;
-  margin-bottom: 8px;
+  align-items: center;
+  margin-bottom: 8px; /* Tighter spacing */
 }
 
 .info-item i {
   color: rgb(219, 175, 183);
   width: 25px;
   margin-right: 10px;
-  margin: top -150px;
 }
-
-/* Mobile Fix */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column; /* Stack them on phone */
-  }
-}
-
 
 /* =========================================
-   PORTFOLIO PAGE STYLES (Black Background)
+   6. PORTFOLIO / PROJECTS (Clean & Centered)
    ================================********* */
-
-/* 1. Page Background & Reset */
-.portbody {
-  background-color: black;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  overflow-x: hidden; /* Prevents side scrolling */
-}
-
-/* 2. Navigation (Matches your Index page) */
-.header-main {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background-color: black;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
-  border-bottom: 1px solid #333; /* Subtle divider */
-}
-
-.header-main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.header-main-nav li {
-  margin-right: 30px;
-}
-
-.header-main-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.header-main-nav a:hover {
-  color: #FDBEC9; /* Your Pink Hover Color */
-}
-
-
-/* =========================================
-   PROJECT SECTION (CLEAN & CENTERED)
-   ================================********* */
-
-/* 1. Main Section Wrapper */
-#projects {
-  padding-top: 120px;
-  padding-bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-/* 2. Main Titles */
-.section_text_p1 {
-  font-size: 18px;
-  color: #ccc;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  text-align: center;
-  margin-bottom: 60px;
-  color: white;
-}
-
-/* 3. Individual Project Container */
 .detailes-container {
   margin-bottom: 80px;
   width: 90%;
@@ -455,9 +396,10 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto 80px auto;
 }
 
-/* 4. Project Images */
+/* Project Images */
 .project-img, 
 .project-img2, 
 .project-img3,
@@ -466,14 +408,14 @@ section {
 .project-img6 {
   width: 100%;
   max-width: 700px;
-  height: 450px; 
+  height: 450px;
   border: 5px solid grey;
-  display: block; 
-  margin-bottom: 30px; 
+  display: block;
+  margin-bottom: 30px;
   object-fit: cover;
 }
 
-/* 5. Project Titles */
+/* Project Text */
 .project-title,
 .project-title2,
 .project-title3,
@@ -488,7 +430,6 @@ section {
   color: white;
 }
 
-/* 6. Project Descriptions */
 .project1-description,
 .project2-description,
 .project3-description,
@@ -501,165 +442,83 @@ section {
   text-align: center;
   margin: 0 auto;
   line-height: 1.6;
-  max-width: 650px; 
+  max-width: 650px;
   width: 100%;
   font-weight: 300;
   font-style: normal;
 }
 
-/* 7. Hide the black dot header */
-.coolheader {
-  display: none; 
-}
-
 /* =========================================
-   HAMBURGER MENU BASE (DESKTOP)
+   7. MOBILE RESPONSIVENESS (Max Width 768px)
    ================================********* */
-.toggle-button {
-  display: none; /* Hidden on computer */
-  position: absolute;
-  right: 20px;
-  top: 20px; /* Positions it correctly */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  z-index: 2000;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-/* =========================================
-   MOBILE RESPONSIVENESS (Max Width 768px)
-   ================================********* */
-
 @media (max-width: 768px) {
-
-  /* 1. Fix the Main Container Stacking */
+  
+  /* Hero Split - Stack vertically */
   .hero-split {
     flex-direction: column;
     margin-top: 60px;
   }
 
-  /* 2. Fix the White Section (Top) */
   .hero-left {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
     border-right: none;
     border-bottom: 5px solid black;
     padding: 40px 20px;
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
   }
 
-  .hero-left .content-wrapper,
-  .intro-text,
-  .signaturelogo, 
+  /* Reset transformations for mobile */
   .script-name {
-    margin: 0 auto;
-    text-align: center;
     transform: none;
-  }
-  
-  .script-name {
     margin-top: -10px;
     margin-bottom: 20px;
-    display: block;
   }
 
-  /* 3. Fix the Black Section (Bottom) */
   .hero-right {
-    width: 100%;
     padding: 60px 20px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-right .content-wrapper {
-    margin: 0;
-    text-align: center;
-    align-items: center;
   }
 
   .hero-right h1 {
-    font-size: 32px; 
-    text-align: center;
+    font-size: 32px;
   }
 
-  /* 4. Fix the Profile Pic */
+  /* Profile Pic Mobile */
   .profile-pic {
-    order: -1;
-    width: 60%;
-    max-width: 250px;
-    height: auto;
-    margin: 20px auto;
+    width: 250px;
+    height: 250px;
   }
 
-  /* 5. Mobile Navigation */
-  .main-nav {
-    padding: 0 20px;
-  }
-  
-  .nav-name {
-    font-size: 12px;
-  }
-
-  /* Show the button */
+  /* Hamburger Menu Logic */
   .toggle-button {
-    display: flex; 
+    display: flex;
   }
 
-  /* Hide the links by default */
   .nav-links {
-    display: none; 
+    display: none;
     width: 100%;
-    text-align: center;
     position: absolute;
     top: 60px;
     left: 0;
     background-color: black;
     padding: 20px 0;
     border-top: 1px solid #333;
+    flex-direction: column;
   }
-
+  
   .nav-links ul {
     flex-direction: column;
     width: 100%;
-    padding: 0;
   }
 
   .nav-links li {
     margin: 15px 0;
-    display: block;
+    text-align: center;
   }
 
-  /* Show menu when active */
   .nav-links.active {
     display: flex;
+  }
+  
+  /* Contact Mobile Stack */
+  .contact-container {
     flex-direction: column;
   }
-
-  /* 6. Fix Project Fonts on Mobile */
-  .project-title, .project-title2, .project-title3,
-  .project-title4, .project-title5, .project-title6 {
-    font-size: 24px;
-  }
-  
-  .project1-description, .project2-description, .project3-description,
-  .project4-description, .project5-description, .project6-description {
-    font-size: 16px;
-    padding: 0 10px;
-  }
 }
-  
-    
- 
