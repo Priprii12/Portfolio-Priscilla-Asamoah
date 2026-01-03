@@ -522,52 +522,12 @@ section {
 }
 /* Hide the decorative dot if it interferes, or style it */
 .coolheader {
-  display: none; /* Hides the blackdot image unless you really need it */
-}
-
-/* 7. Mobile Adjustments */
-@media (max-width: 768px) {
-  .header-main {
-    padding: 0 20px;
-  }
-  
-  .title {
-    font-size: 36px;
-  }
-  
-  .project-title, .project-title2, .project-title3 {
-    font-size: 24px;
-  }
-  
-  .project1-description, .project2-description, .project3-description {
-    font-size: 16px;
-    padding: 0 20px;
-  }
-}
-
-
-/* 1. Base Styles (Desktop) - Hide the hamburger */
-.toggle-button {
-  display: none; /* Hidden on computer */
-  position: absolute;
-  right: 20px;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
+  display: none; /* Hides the blackdot image unless you really need 
 
 
 
  /* =========================================
-   MOBILE FIXES (Add to bottom of style.css)
+   MOBILE FIXES 
    ================================********* */
 
 @media (max-width: 768px) {
@@ -666,7 +626,7 @@ section {
   }
 
   .nav-links li {
-    margin: 15px 0; /* Space them out */
+    margin: 13px 0; /* Space them out */
     display: block;
   }
 
@@ -683,4 +643,40 @@ section {
   .nav-name {
     font-size: 12px; /* Smaller name in corner */
   }
+    .header-main {
+    padding: 0 20px;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .project-title, .project-title2, .project-title3 {
+    font-size: 24px;
+  }
+  
+  .project1-description, .project2-description, .project3-description {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+}
+
+
+/* 1. Base Styles (Desktop) - Hide the hamburger */
+.toggle-button {
+  display: none; /* Hidden on computer */
+  position: absolute;
+  right: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
 }
