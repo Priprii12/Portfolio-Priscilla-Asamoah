@@ -173,10 +173,10 @@ Maintained a 100% positive customer feedback rating through excellent service an
       
       <!-- LEFT SIDE: The Form -->
       <div class="contact-left">
-        <form action="#" method="POST" class="simple-form">
-          <input type="text" placeholder="Name" required>
-          <input type="email" placeholder="Email" required>
-          <textarea placeholder="Message" rows="5" required></textarea>
+        <form action="contact.php" method="POST" class="simple-form">
+          <input type="text" placeholder="Name" required name="name" id="name">
+          <input type="email" placeholder="Email" required name="email" id="email">
+          <textarea placeholder="Message" rows="5" required name="message" id="message"></textarea>
           <button type="submit">SEND MESSAGE</button>
         </form>
       </div>
@@ -223,6 +223,7 @@ Maintained a 100% positive customer feedback rating through excellent service an
     navbarLinks.classList.toggle('active');
   });
 
+
   // 2. Select all 'a' tags (links) INSIDE the nav-links div
   const links = document.querySelectorAll(".nav-links a");
 
@@ -234,6 +235,63 @@ Maintained a 100% positive customer feedback rating through excellent service an
           // toggleButton.classList.remove("active"); 
       });
   });
+</script>
+<script >
+// scripts.js
+
+document.getElementById('contact-section').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Clear previous errors
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach(el => el.style.display = 'none');
+
+    // Get form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Validation flags
+    let isValid = true;
+
+    // Name validation
+    if (name === '') {
+        document.getElementById('nameError').textContent = 'Name is required';
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === '' || !emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = 'Valid email is required';
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Phone validation
+    const phonePattern = /^[0-9]{10}$/;
+    if (phone === '' || !phonePattern.test(phone)) {
+        document.getElementById('phoneError').textContent = 'Valid phone number is required';
+        document.getElementById('phoneError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Message validation
+    if (message === '') {
+        document.getElementById('messageError').textContent = 'Message is required';
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+    }
+
+    // If form is valid, you can submit it or perform any other action
+    if (isValid) {
+        alert('Form submitted successfully!');
+        // You can also submit the form here using AJAX or similar methods
+    }
+});
+
 </script>
 </section>
 
