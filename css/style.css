@@ -22,11 +22,11 @@ html {
 }
 
 section {
-  scroll-margin-top: 60px; /* Offsets scroll for fixed header */
+  scroll-margin-top: 60px; /* Prevents header from covering titles */
 }
 
 /* =========================================
-   2. NAVIGATION BAR
+   2. NAVIGATION BAR (Horizontal on Desktop)
    ================================********* */
 .main-nav {
   position: fixed;
@@ -41,37 +41,43 @@ section {
   z-index: 1000;
 }
 
-.nav-links ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin-right: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.nav-links a:hover {
-  color: #FDBEC9;
-}
-
 .nav-name {
   color: white;
   font-size: 14px;
   font-weight: bold;
 }
 
-/* HAMBURGER MENU (Hidden on Desktop) */
+/* Desktop Links - Horizontal List */
+.nav-links {
+  display: block; /* Visible on desktop */
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex; /* Horizontal alignment */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px; /* Spacing between links */
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FDBEC9; /* Pink hover effect */
+}
+
+/* HAMBURGER MENU BUTTON (Hidden on Desktop) */
 .toggle-button {
   display: none;
   position: absolute;
@@ -93,12 +99,12 @@ section {
 }
 
 /* =========================================
-   3. HERO SECTION (SPLIT SCREEN)
+   3. HERO SECTION (Split Screen)
    ================================********* */
 .hero-split {
   display: flex;
   min-height: 100vh;
-  margin-top: 60px; /* Space for navbar */
+  margin-top: 60px; /* Pushes content below fixed header */
 }
 
 /* Left Side (White) */
@@ -112,6 +118,7 @@ section {
   align-items: center;
   padding: 40px;
   text-align: center;
+  position: relative;
 }
 
 /* Right Side (Black) */
@@ -121,12 +128,12 @@ section {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically centered */
-  align-items: center;     /* Horizontally centered */
+  justify-content: center;
+  align-items: center;
   padding: 40px;
 }
 
-/* Content & Typography */
+/* Content Styling */
 .content-wrapper {
   max-width: 500px;
   width: 100%;
@@ -162,7 +169,7 @@ section {
   height: 320px;
   border: 5px solid rgb(219, 175, 183);
   object-fit: cover;
-  border-radius: 50%; /* Optional circle */
+  border-radius: 50%;
   margin-top: 20px;
 }
 
@@ -280,7 +287,7 @@ section {
 .edu-item h3, .job-item h3 {
   font-size: 22px;
   margin-bottom: 5px;
-  color: rgb(219, 175, 183); /* Pink headers */
+  color: rgb(219, 175, 183);
 }
 
 .meta {
@@ -377,7 +384,7 @@ section {
 .info-item {
   display: flex;
   align-items: center;
-  margin-bottom: 8px; /* Tighter spacing */
+  margin-bottom: 8px;
 }
 
 .info-item i {
@@ -387,8 +394,34 @@ section {
 }
 
 /* =========================================
-   6. PORTFOLIO / PROJECTS (Clean & Centered)
+   6. PORTFOLIO PAGE STYLES
    ================================********* */
+/* Main Background is Black */
+.portbody {
+  background-color: black;
+  color: white;
+}
+
+/* Portfolio Section Wrapper */
+#projects {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: black; /* Ensuring black background */
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+}
+
+/* Project Container */
 .detailes-container {
   margin-bottom: 80px;
   width: 90%;
@@ -399,13 +432,9 @@ section {
   margin: 0 auto 80px auto;
 }
 
-/* Project Images */
-.project-img, 
-.project-img2, 
-.project-img3,
-.project-img4, 
-.project-img5, 
-.project-img6 {
+/* Project Images - Uniform Size */
+.project-img, .project-img2, .project-img3,
+.project-img4, .project-img5, .project-img6 {
   width: 100%;
   max-width: 700px;
   height: 450px;
@@ -415,13 +444,9 @@ section {
   object-fit: cover;
 }
 
-/* Project Text */
-.project-title,
-.project-title2,
-.project-title3,
-.project-title4,
-.project-title5,
-.project-title6 {
+/* Project Titles */
+.project-title, .project-title2, .project-title3,
+.project-title4, .project-title5, .project-title6 {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
   margin-bottom: 15px;
@@ -430,12 +455,9 @@ section {
   color: white;
 }
 
-.project1-description,
-.project2-description,
-.project3-description,
-.project4-description,
-.project5-description,
-.project6-description {
+/* Project Descriptions - Straight text */
+.project1-description, .project2-description, .project3-description,
+.project4-description, .project5-description, .project6-description {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #eee;
@@ -453,7 +475,7 @@ section {
    ================================********* */
 @media (max-width: 768px) {
   
-  /* Hero Split - Stack vertically */
+  /* Stack the Hero Section */
   .hero-split {
     flex-direction: column;
     margin-top: 60px;
@@ -463,9 +485,10 @@ section {
     border-right: none;
     border-bottom: 5px solid black;
     padding: 40px 20px;
+    width: 100%;
   }
 
-  /* Reset transformations for mobile */
+  /* Reset fancy transforms for mobile */
   .script-name {
     transform: none;
     margin-top: -10px;
@@ -474,19 +497,19 @@ section {
 
   .hero-right {
     padding: 60px 20px;
+    width: 100%;
   }
 
   .hero-right h1 {
     font-size: 32px;
   }
 
-  /* Profile Pic Mobile */
   .profile-pic {
     width: 250px;
     height: 250px;
   }
 
-  /* Hamburger Menu Logic */
+  /* Show Hamburger, Hide Links */
   .toggle-button {
     display: flex;
   }
@@ -509,15 +532,20 @@ section {
   }
 
   .nav-links li {
-    margin: 15px 0;
     text-align: center;
+    margin: 15px 0;
+  }
+  
+  .nav-links a {
+    margin-left: 0; /* Remove desktop left margin */
   }
 
+  /* This active class is added by JS to show menu */
   .nav-links.active {
     display: flex;
   }
   
-  /* Contact Mobile Stack */
+  /* Mobile Contact Fix */
   .contact-container {
     flex-direction: column;
   }
