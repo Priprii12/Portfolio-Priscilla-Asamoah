@@ -1,346 +1,296 @@
 /* =========================================
-   1. RESET & BASICS
+   INDEX PAGE STYLES 
    ================================********* */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    /* --- RESET & BASICS --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-html {
-  scroll-behavior: smooth;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    html {
+  scroll-behavior: smooth; /* Makes it scroll nicely instead of jumping */
 }
 
 section {
-  scroll-margin-top: 60px; /* Prevents header from covering titles */
+  scroll-margin-top: 60px; /* The Magic Fix: Stops scrolling 80px above the section */
 }
 
-/* =========================================
-   2. NAVIGATION BAR (Horizontal on Desktop)
-   ================================********* */
-.main-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  background: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
-  z-index: 1000;
-}
+    /* --- NAVIGATION --- */
+    .main-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      z-index: 1000;
+    }
 
-.nav-name {
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-}
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
 
-/* Desktop Links - Horizontal List */
-.nav-links {
-  display: block; /* Visible on desktop */
-}
+    .nav-links a:hover {
+      color: #FDBEC9;
+    }
 
-.nav-links ul {
-  list-style: none;
-  display: flex; /* Horizontal alignment */
-  margin: 0;
-  padding: 0;
-}
+    .nav-name {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
 
-.nav-links li {
-  margin: 0;
-}
+    /* --- HERO SECTION (SPLIT SCREEN) --- */
+    .hero-split {
+      display: flex;
+      min-height: 100vh;
+    
+    
+    }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-left: 25px; /* Spacing between links */
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-family: 'Open Sans', sans-serif;
-  transition: color 0.3s;
-}
+    .hero-left {
+      flex: 1;
+      background: white;
+      border-bottom: 5px solid black;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+    }
 
-.nav-links a:hover {
-  color: #FDBEC9; /* Pink hover effect */
-}
+    .hero-right {
+      flex: 1;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-/* HAMBURGER MENU BUTTON (Hidden on Desktop) */
-.toggle-button {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  z-index: 2000;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-/* =========================================
-   3. HERO SECTION (Split Screen)
-   ================================********* */
-.hero-split {
-  display: flex;
-  min-height: 100vh;
-  margin-top: 60px; /* Pushes content below fixed header */
-}
-
-/* Left Side (White) */
-.hero-left {
-  flex: 1;
-  background: white;
-  border-bottom: 5px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  text-align: center;
-  position: relative;
-}
-
-/* Right Side (Black) */
-.hero-right {
-  flex: 1;
-  background: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-}
-
-/* Content Styling */
-.content-wrapper {
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
-
-.intro-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  color: #081123;
-  margin: 0;
-}
-
-.main-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 80px;
-  line-height: 0.9;
-  color: #081123;
-  margin-bottom: 10px;
-}
-
-.script-name {
-  font-family: 'Mrs Saint Delafield', cursive;
-  font-size: 70px;
-  color: #081123;
-  transform: rotate(-10deg) translateX(20px);
-  display: block;
-  margin-bottom: 20px;
-}
-
-.profile-pic {
-  width: 320px;
-  height: 320px;
-  border: 5px solid rgb(219, 175, 183);
-  object-fit: cover;
-  border-radius: 50%;
-  margin-top: 20px;
-}
-
-/* Hero Right Text */
-.hero-right h1 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 36px;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-.hero-right .sub-text {
-  font-size: 16px;
-  margin-bottom: 30px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-/* Download Button */
+      
+    
+    }
+    /* --- DOWNLOAD CV BUTTON --- */
 .btn-download {
   display: inline-block;
-  background-color: rgb(219, 175, 183);
+  background-color: rgb(219, 175, 183); /* Your Theme Pink */
   color: white;
   padding: 12px 30px;
-  border-radius: 30px;
+  border-radius: 30px; /* Makes it pill-shaped/rounded */
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 25px;
-  border: 2px solid rgb(219, 175, 183);
+  margin-bottom: 25px; /* Spacing between button and social icons */
   transition: all 0.3s ease;
+  border: 2px solid rgb(219, 175, 183);
 }
 
 .btn-download:hover {
-  background-color: transparent;
-  color: rgb(219, 175, 183);
+  background-color: transparent; /* See-through on hover */
+  color: rgb(219, 175, 183); /* Text turns pink */
+  border: 2px solid rgb(219, 175, 183);
+  transform: translateY(-3px); /* Floats up slightly */
 }
 
-/* Social Icons */
-.social-icons {
+    .content-wrapper {
+    max-width: 500px;
+  width: 100%;
+  text-align: flex-end; 
   display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.pink-square {
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgb(219, 175, 183);
-  text-decoration: none;
-  transition: transform 0.2s;
-}
 
-.pink-square img {
-  width: 20px;
-  height: auto;
-}
+  
+    }
+    .signaturelogo{
+      margin-right: 500px;
+      align-items: start;
+    }
 
-.pink-square:hover {
-  transform: scale(1.1);
-  background-color: rgb(239, 207, 212);
-}
+    .intro-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #081123;
+      margin-bottom: 0;
+      margin-right: 350px;
+    }
 
-/* =========================================
-   4. SECTIONS (Education, Skills, etc.)
-   ================================********* */
-.dark-section {
-  background-color: black;
-  color: white;
-  padding: 60px 10%;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    .main-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      line-height: 0.9;
+      color: #081123;
+      margin-bottom: 10px;
+    }
 
-.light-section {
-  background-color: #eee;
-  padding: 60px 10%;
-  text-align: center;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    .script-name {
+      font-family: 'Mrs Saint Delafield', cursive;
+      font-size: 70px;
+      color: #081123;
+      transform: rotate(-18deg) translateX(5px) translateY(-20px);
+      display: block;
+    }
+  
 
-.white-section {
-  background-color: white;
-  color: #333;
-  padding: 60px 10%;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    .hero-right h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
 
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  text-align: center;
-}
+    .hero-right .sub-text {
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
 
-/* Education Items */
-.edu-item, .job-item {
-  margin-bottom: 30px;
-}
+    .profile-pic {
+  
+ width: 320px; /* Bigger and better! */
+  height: 320px; /* Optional: Forces a square/circle shape if you want */
+  border: 5px solid rgb(219, 175, 183);
+  object-fit: cover; /* Ensures face isn't stretched */
+  margin-top: 30px; /* Space between Name and Face */
+  border-radius: 50%; /* Optional: Makes it a circle (very popular style) */
+    }
 
-.edu-item h3, .job-item h3 {
-  font-size: 22px;
-  margin-bottom: 5px;
-  color: rgb(219, 175, 183);
-}
+    /* --- PINK SQUARE ICONS (FIXED) --- */
+    .social-icons {
+      display: flex;
+      gap: 20px; /* Space between icons */
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
 
-.meta {
-  font-style: italic;
-  margin-bottom: 10px;
-  color: gray;
-}
+    .pink-square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;  
+        height: 30px; 
+        margin-top: 25px;
+        margin-left: 5px;
+        background-color: rgb(219, 175, 183); /* Pink */
+        transition: transform 0.2s; 
+        text-decoration: none; /* Remove underline */
+    }
 
-.dark-section .meta {
-  color: #bbb;
-}
 
-.quote {
-  border-left: 4px solid pink;
-  padding-left: 20px;
-  margin-top: 40px;
-  font-style: italic;
-}
+    .pink-square:hover {
+        background-color: rgb(239, 207, 212);
+        transform: scale(1.1);
+    }
 
-/* Skills Grid */
-.skills-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+    /* --- SECTIONS --- */
+    .dark-section {
+      background-color: black;
+      color: white;
+      padding: 20px 10% 80px 10%; 
+      min-height: 80vh; /* 80% of the screen height */
+      border: none; /* No more white border */
+     
+    }
 
-.skill-card {
-  background: white;
-  padding: 20px;
-  margin: 10px;
-  width: 250px;
-  border-bottom: 4px solid black;
-}
+    .light-section {
+      background-color: #eee;
+      padding: 80px 10%;
+      text-align: center;
+       min-height: 80vh; /* 80% of the screen height */
+  
+    }
 
-/* =========================================
-   5. CONTACT SECTION
-   ================================********* */
+    .white-section {
+      background-color: white;
+      color: #333;
+      padding: 80px 10%;
+       min-height: 80vh; /* 80% of the screen height */
+  
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+    /* --- EDUCATION SECTION --- */
+    .edu-item, .job-item {
+    margin-bottom: 5px;
+    }
+
+    .edu-item h3, .job-item h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .meta {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: gray;
+    }
+
+    .dark-section .meta {
+      color: #bbb;
+    }
+
+    .quote {
+      border-left: 4px solid pink;
+      padding-left: 20px;
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    .skills-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      border-bottom: 4px solid black;
+    }
+
+/* --- CONTACT SECTION (Split Layout) --- */
 .contact-section {
   background-color: black;
   color: white;
   padding: 60px 10%;
-  border-top: 1px solid #333;
+  border-top: 1px solid #333; /* Subtle divider line */
 }
 
 .contact-container {
   display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
+  gap: 50px; /* Space between Form and Info */
+  flex-wrap: wrap; /* Wraps on mobile */
   align-items: flex-start;
 }
 
+/* LEFT SIDE: Form Styling */
 .contact-left {
-  flex: 1.5;
+  flex: 1.5; /* Takes up slightly more space */
 }
 
 .simple-form input, 
@@ -348,11 +298,17 @@ section {
   width: 100%;
   padding: 15px;
   margin-bottom: 20px;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a; /* Dark Grey Input background */
   border: 1px solid #333;
   color: white;
   font-family: 'Raleway', sans-serif;
-  border-radius: 4px;
+  border-radius: 4px; /* Slight curve */
+}
+
+.simple-form input:focus, 
+.simple-form textarea:focus {
+  outline: none;
+  border-color: rgb(219, 175, 183); /* Pink focus border */
 }
 
 .simple-form button {
@@ -362,8 +318,15 @@ section {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.3s;
 }
 
+.simple-form button:hover {
+  background-color: rgb(239, 207, 212);
+}
+
+/* RIGHT SIDE: Info Styling */
 .contact-right {
   flex: 1;
 }
@@ -383,7 +346,8 @@ section {
 
 .info-item {
   display: flex;
-  align-items: center;
+  align-items: left;
+  margin-left: -30px;
   margin-bottom: 8px;
 }
 
@@ -391,18 +355,74 @@ section {
   color: rgb(219, 175, 183);
   width: 25px;
   margin-right: 10px;
+  margin: top -150px;
 }
 
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack them on phone */
+  }
+}
+
+
 /* =========================================
-   6. PORTFOLIO PAGE STYLES
+   PORTFOLIO PAGE STYLES (Black Background)
    ================================********* */
-/* Main Background is Black */
+
+/* 1. Page Background & Reset */
 .portbody {
   background-color: black;
   color: white;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden; /* Prevents side scrolling */
 }
 
-/* Portfolio Section Wrapper */
+/* 2. Navigation (Matches your Index page) */
+.header-main {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  border-bottom: 1px solid #333; /* Subtle divider */
+}
+
+.header-main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-main-nav li {
+  margin-right: 30px;
+}
+
+.header-main-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-main-nav a:hover {
+  color: #FDBEC9; /* Your Pink Hover Color */
+}
+
+/* 3. Main Project Section Layout */
+/* 3. Main Project Section Layout */
+/* =========================================
+   PROJECT SECTION (CLEAN & CENTERED)
+   ================================********* */
+
+/* 1. Main Section Wrapper */
 #projects {
   padding-top: 120px;
   padding-bottom: 100px;
@@ -410,7 +430,14 @@ section {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: black; /* Ensuring black background */
+}
+
+/* 2. Main Titles (e.g., "Browse My Recent") */
+.section_text_p1 {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .title {
@@ -421,132 +448,182 @@ section {
   color: white;
 }
 
-/* Project Container */
+/* 3. Individual Project Container (Holds Image + Text) */
 .detailes-container {
   margin-bottom: 80px;
-  width: 90%;
-  max-width: 900px;
+  width: 90%;          /* Uses percentage so it fits mobile */
+  max-width: 900px;    /* Stops it from getting too wide */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0 auto 80px auto;
+  align-items: center; /* Forces everything to the center line */
 }
 
-/* Project Images - Uniform Size */
-.project-img, .project-img2, .project-img3,
-.project-img4, .project-img5, .project-img6 {
+/* 4. Project Images */
+/* NOTE: We list all classes to make sure they all behave the same */
+.project-img, 
+.project-img2, 
+.project-img3,
+.project-img4, 
+.project-img5, 
+.project-img6 {
   width: 100%;
   max-width: 700px;
-  height: 450px;
+  
+  /* THE FIX: 450px is the happy medium between "too small" and "too tall" */
+  height: 450px; 
+  
   border: 5px solid grey;
-  display: block;
-  margin-bottom: 30px;
-  object-fit: cover;
+  
+  /* IMPORTANT FIX: Images should be 'block', not 'flex' */
+  display: block; 
+  
+  margin-bottom: 30px; /* Space between Image and Title */
+ 
 }
 
-/* Project Titles */
-.project-title, .project-title2, .project-title3,
-.project-title4, .project-title5, .project-title6 {
+/* 5. Project Titles */
+.project-title,
+.project-title2,
+.project-title3,
+.project-title4,
+.project-title5,
+.project-title6 {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   text-align: center;
   width: 100%;
   color: white;
 }
 
-/* Project Descriptions - Straight text */
-.project1-description, .project2-description, .project3-description,
-.project4-description, .project5-description, .project6-description {
+/* 6. Project Descriptions */
+.project1-description,
+.project2-description,
+.project3-description,
+.project4-description,
+.project5-description,
+.project6-description {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #eee;
-  text-align: center;
-  margin: 0 auto;
+  
+  /* ALIGNMENT FIX */
+  text-align: center; /* Centers the words */
+  margin: 0 auto;     /* Centers the invisible text box */
+  
   line-height: 1.6;
-  max-width: 650px;
+  
+  /* TRICK: Making text slightly narrower than the image looks cleaner */
+  max-width: 650px; 
   width: 100%;
+  
   font-weight: 300;
-  font-style: normal;
+  font-style: normal; /* Ensures no italics */
+}
+/* Hide the decorative dot if it interferes, or style it */
+.coolheader {
+  display: none; /* Hides the blackdot image unless you really need it */
 }
 
-/* =========================================
-   7. MOBILE RESPONSIVENESS (Max Width 768px)
-   ================================********* */
+/* 7. Mobile Adjustments */
 @media (max-width: 768px) {
+  .header-main {
+    padding: 0 20px;
+  }
   
-  /* Stack the Hero Section */
+  .title {
+    font-size: 36px;
+  }
+  
+  .project-title, .project-title2, .project-title3 {
+    font-size: 24px;
+  }
+  
+  .project1-description, .project2-description, .project3-description {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+}
+
+ /* =========================================
+   MOBILE FIXES (Add to bottom of style.css)
+   ================================********* */
+
+@media (max-width: 768px) {
+
+  /* 1. Fix the Main Container Stacking */
   .hero-split {
-    flex-direction: column;
-    margin-top: 60px;
+    flex-direction: column; /* Stacks White on top of Black */
+    margin-top: 60px; /* Space for navbar */
   }
 
+  /* 2. Fix the White Section (Top) */
   .hero-left {
-    border-right: none;
-    border-bottom: 5px solid black;
-    padding: 40px 20px;
     width: 100%;
+    border-right: none; /* REMOVES THE WEIRD VERTICAL LINE */
+    border-bottom: 5px solid black; /* Adds a clean divider at the bottom instead */
+    padding: 40px 20px;
+    
+    /* Center the Name and Logo */
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
   }
 
-  /* Reset fancy transforms for mobile */
+  /* Reset margins for the name elements so they center properly */
+  .hero-left .content-wrapper,
+  .intro-text,
+  .signaturelogo, 
   .script-name {
-    transform: none;
+    margin: 0 auto; /* Forces everything to center */
+    text-align: center;
+    transform: none; /* Removes fancy rotations that might break mobile */
+  }
+  
+  /* Optional: Make the script name readable on mobile */
+  .script-name {
     margin-top: -10px;
     margin-bottom: 20px;
+    display: block;
   }
 
+  /* 3. Fix the Black Section (Bottom) */
   .hero-right {
-    padding: 60px 20px;
     width: 100%;
+    padding: 60px 20px;
+    
+    /* Center everything */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
+  /* Fix the text alignment in the black section */
+  .hero-right .content-wrapper {
+    margin: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Make the big text slightly smaller for phone screens */
   .hero-right h1 {
-    font-size: 32px;
+    font-size: 32px; 
+    text-align: center;
   }
 
+  /* 4. Fix the Profile Pic if it's there */
   .profile-pic {
     width: 250px;
     height: 250px;
+    margin: 20px auto;
   }
 
-  /* Show Hamburger, Hide Links */
-  .toggle-button {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: black;
-    padding: 20px 0;
-    border-top: 1px solid #333;
-    flex-direction: column;
+  /* 5. Navigation Bar Fix */
+  .main-nav {
+    padding: 0 20px; /* Less padding on sides */
   }
   
-  .nav-links ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-links li {
-    text-align: center;
-    margin: 15px 0;
-  }
-  
-  .nav-links a {
-    margin-left: 0; /* Remove desktop left margin */
-  }
-
-  /* This active class is added by JS to show menu */
-  .nav-links.active {
-    display: flex;
-  }
-  
-  /* Mobile Contact Fix */
-  .contact-container {
-    flex-direction: column;
+  .nav-name {
+    font-size: 12px; /* Smaller name in corner */
   }
 }
