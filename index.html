@@ -26,6 +26,15 @@
 <body>
   
   <nav class="main-nav">
+    
+     <div class="nav-name">PRISCILLA ASAMOAH</div>
+    
+       <a href="#" class="toggle-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  
     <div class="nav-links">
       <a href="index.html">HOME</a>
       <a href="#education">EDUCATION</a>
@@ -34,7 +43,7 @@
        <a href="Portfolio.html">PORTFOLIO</a>
       <a href="#contact">CONTACT</a>
     </div>
-    <div class="nav-name">PRISCILLA ASAMOAH</div>
+   
   </nav>
 
   <main>
@@ -207,6 +216,14 @@ Maintained a 100% positive customer feedback rating through excellent service an
 
     </div>
   </div>
+  <script>
+  const toggleButton = document.getElementsByClassName('toggle-button')[0];
+  const navbarLinks = document.getElementsByClassName('nav-links')[0];
+
+  toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+  });
+</script>
 </section>
 
   </main>
